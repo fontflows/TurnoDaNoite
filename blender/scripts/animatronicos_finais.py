@@ -1,6 +1,6 @@
 """
 animatronicos_finais.py — Tito e Pipoca finais: fantasia de pelúcia em peças rígidas sobre o
-endoesqueleto do colega (blender/personagens_colega/animatronic.blend, que NÃO é alterado).
+endoesqueleto (blender/endoesqueleto/animatronic.blend, que NÃO é alterado).
 
 Cada peça da fantasia segue um osso (cabeça, mandíbula, peito, braço, antebraço, mão, coxa, canela,
 pé, orelhas), com frestas nas juntas mostrando o metal. Ossos novos (só os essenciais que faltavam):
@@ -25,7 +25,7 @@ from mathutils import Matrix, Vector
 
 RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "scripts"))
-import endoesqueleto_colega as E  # noqa: E402
+import endoesqueleto as E  # noqa: E402
 
 TEX = RAIZ.parent / "godot" / "assets" / "texturas"
 TEXA = TEX / "animatronicos"
@@ -33,7 +33,7 @@ FRENTE = Vector((0, -1, 0))
 CIMA = Vector((0, 0, 1))
 
 # ---------------------------------------------------------------------------------------------
-# Proporções: (comprimento, grossura) de cada osso em relação ao endoesqueleto do colega.
+# Proporções: (comprimento, grossura) de cada osso em relação ao endoesqueleto.
 CABECA_SEGUE = ("olho", "palpebra_sup", "palpebra_inf", "mandibula")
 PERSONAGENS = {
     "tito": {
@@ -550,7 +550,7 @@ def pe(mt, lado, alongar, largura, altura, mat="pelo_sujo", mat_sola="claro_sujo
 
 
 def _pontos_material(mt, osso, nome_mat):
-    """Pontos (mundo) só das faces que usam o material (os objetos do colega têm vários materiais)."""
+    """Pontos (mundo) só das faces que usam o material (os objetos do endoesqueleto têm vários materiais)."""
     ps = []
     for ob in mt.endo:
         if ob["osso"] != osso:
@@ -622,12 +622,12 @@ def cabeca(mt, raios, desloc):
     mt.peca(f"{mt.N}_Cabeca", elipsoide(c, *raios, u_segs=40, v_segs=22), [M["pelo"]], "cabeca", casca=0.018, cortes=cortes)
     for lado, (oc, r, yf) in olhos.items():
         nome_lado = "Esq" if lado == "L" else "Dir"
-        # íris (brilha) e pupila, coladas na frente do olho do colega e presas no osso do olho
+        # íris (brilha) e pupila, coladas na frente do olho do endoesqueleto e presas no osso do olho
         mt.peca(f"{mt.N}_Iris_{nome_lado}", elipsoide(Vector((oc.x, yf + r * 0.035, oc.z)), r * 0.56, r * 0.05, r * 0.56, None, 24, 12),
                 [M["iris"]], f"olho.{lado}")
         mt.peca(f"{mt.N}_Pupila_{nome_lado}", elipsoide(Vector((oc.x, yf + r * 0.01, oc.z)), r * 0.22, r * 0.04, r * 0.28, None, 16, 8),
                 [M["pupila"]], f"olho.{lado}")
-        # pálpebras de pelúcia sobre as de metal do colega (mesmo osso, um pouco maiores)
+        # pálpebras de pelúcia sobre as de metal do endoesqueleto (mesmo osso, um pouco maiores)
         for qual in ("sup", "inf"):
             for ob in [o for o in mt.endo if o["osso"] == f"palpebra_{qual}.{lado}"]:
                 bmp = bmesh.new()

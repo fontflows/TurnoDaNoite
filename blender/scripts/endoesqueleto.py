@@ -1,6 +1,6 @@
 """
-endoesqueleto_colega.py — prepara o endoesqueleto do colega (blender/personagens_colega/animatronic.blend)
-para receber a fantasia do Tito e da Pipoca. NUNCA salva por cima do arquivo do colega.
+endoesqueleto.py — prepara o endoesqueleto (blender/endoesqueleto/animatronic.blend)
+para receber a fantasia do Tito e da Pipoca. NUNCA salva por cima do arquivo original.
 
 O arquivo dele tem as peças do endoesqueleto prontas (pistões, juntas, cabeça com dentes, olhos e
 pálpebras, dedos), mas sem armature: as peças estão juntas em poucos objetos (com espelhamento).
@@ -12,7 +12,7 @@ Aqui:
   4. muda as proporções por personagem (Tito largo e baixo, Pipoca alta e fina) movendo as juntas.
 A fantasia vem depois (animatronicos_finais.py).
 
-Coordenadas do arquivo do colega: frente para +Y, ~21 unidades de altura. No fim giramos 180° (frente
+Coordenadas do arquivo original: frente para +Y, ~21 unidades de altura. No fim giramos 180° (frente
 para −Y, padrão do projeto) e escalamos para metros.
 """
 
@@ -22,12 +22,12 @@ import bmesh
 import bpy
 from mathutils import Vector
 
-ARQUIVO_COLEGA = "personagens_colega/animatronic.blend"
+ARQUIVO_ENDOESQUELETO = "endoesqueleto/animatronic.blend"
 
-# Materiais da fantasia que o colega começou (substituída pela nossa) e objetos de cena.
+# Materiais da fantasia provisória do arquivo original (substituída pela final) e objetos de cena.
 MATERIAIS_DESCARTADOS = {"YellowFur", "BeigeFur"}
 
-# Juntas no arquivo do colega (frente +Y). s = lado: +1 = x positivo (lado DIREITO do boneco).
+# Juntas no arquivo original (frente +Y). s = lado: +1 = x positivo (lado DIREITO do boneco).
 JUNTAS = {
     "quadril": ((0, 0, -2.0), (0, 0, 0.0)),
     "tronco": ((0, 0, 0.0), (0, 0, 7.8)),
@@ -52,7 +52,7 @@ PAIS = {
     "coxa": "quadril", "canela": "coxa", "pe": "canela",
     "olho": "cabeca", "palpebra_sup": "cabeca", "palpebra_inf": "cabeca",
 }
-# Peças com dono fixo (pelo nome do objeto original do colega)
+# Peças com dono fixo (pelo nome do objeto no arquivo original)
 DONO_FIXO = {
     "Cube.051": "olho", "Cube.052": "olho",
     "Cube.054": "palpebra_sup", "Cube.055": "palpebra_sup",
@@ -72,7 +72,7 @@ def nome_osso(base, s):
 
 
 def lista_ossos():
-    """[(nome, cabeça, cauda, pai)] no espaço do colega."""
+    """[(nome, cabeça, cauda, pai)] no espaço do arquivo original."""
     ossos = []
     for nome, (a, b) in JUNTAS.items():
         ossos.append((nome, Vector(a), Vector(b), PAIS.get(nome)))
@@ -108,8 +108,8 @@ def _cortar(bm_origem, plano_co, plano_no):
 
 
 def preparar(raiz_blender):
-    """Abre o arquivo do colega e deixa: peças soltas (uma por ilha), cada uma com o osso dono em ["osso"]."""
-    bpy.ops.wm.open_mainfile(filepath=str(raiz_blender / ARQUIVO_COLEGA))
+    """Abre o arquivo do endoesqueleto e deixa: peças soltas (uma por ilha), cada uma com o osso dono em ["osso"]."""
+    bpy.ops.wm.open_mainfile(filepath=str(raiz_blender / ARQUIVO_ENDOESQUELETO))
     deps = bpy.context.evaluated_depsgraph_get()
     pecas = []  # (nome_origem, bmesh já em coordenadas de mundo, materiais)
     for obj in list(bpy.context.scene.objects):
@@ -168,7 +168,7 @@ def preparar(raiz_blender):
         if origem in DONO_FIXO:
             osso = nome_osso(DONO_FIXO[origem], s)
         elif origem in DONO_GRUPO:
-            # peças do tronco do colega (coluna, costelas, placas e barra dos ombros) ficam no tronco
+            # peças do tronco do endoesqueleto (coluna, costelas, placas e barra dos ombros) ficam no tronco
             osso = min((distancia_segmento(centro, a, b), n) for (n, a, b, _p) in ossos if n in DONO_GRUPO[origem])[1]
         else:
             candidatos = [(distancia_segmento(centro, a, b), n) for (n, a, b, _p) in ossos

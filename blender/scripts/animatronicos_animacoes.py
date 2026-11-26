@@ -1,7 +1,7 @@
 """
 animatronicos_animacoes.py — etapa 2 dos animatrônicos finais: animações, GIFs e exportação para o Godot.
 
-Usa o rig do endoesqueleto do colega (juntas dele + ossos essenciais que faltavam: mandíbula, olhos,
+Usa o rig do endoesqueleto (juntas originais + ossos essenciais que faltavam: mandíbula, olhos,
 pálpebras, dedos, orelhas e saia). As animações são geradas quadro a quadro:
   - Pernas com IK (alvos nos pés, joelho apontando para a frente) e pés PLANTADOS: durante o apoio o pé
     vai para trás exatamente na velocidade de referência da animação (no jogo, o AnimationPlayer anda

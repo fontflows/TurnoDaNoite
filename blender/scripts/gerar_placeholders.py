@@ -2,7 +2,7 @@
 gerar_placeholders.py — cria os personagens provisórios (placeholders) Tito e Pipoca.
 
 Por que existe: o jogo precisa de personagens para testar a IA e o jumpscare
-antes de o colega terminar os modelos finais. Estes bonecos são simples, mas
+antes de os modelos finais ficarem prontos. Estes bonecos são simples, mas
 têm "cara de personagem" e seguem o mesmo padrão que os modelos finais devem seguir:
 
 - cerca de 2 m de altura, com a origem (0, 0, 0) nos PÉS;

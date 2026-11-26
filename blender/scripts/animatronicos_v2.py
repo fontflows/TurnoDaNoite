@@ -14,7 +14,7 @@ O que muda em relação à v1 (animatronicos_finais.py, que continua gerando a v
     fenda atrás da orelha do Tito, zíper nas costas da Pipoca, rasgo com cabos na coxa da Pipoca,
     arame na orelha dobrada da Pipoca.
 
-O endoesqueleto e as juntas continuam os do colega (blender/personagens_colega/animatronic.blend,
+O endoesqueleto e as juntas continuam os originais (blender/endoesqueleto/animatronic.blend,
 que não é alterado). Saída: blender/personagens/<nome>_final.blend.
 
 Rodar (na pasta TurnoDaNoite):
@@ -34,7 +34,7 @@ from mathutils.bvhtree import BVHTree
 
 RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "scripts"))
-import endoesqueleto_colega as E  # noqa: E402
+import endoesqueleto as E  # noqa: E402
 import animatronicos_finais as A  # noqa: E402
 from animatronicos_finais import (CIMA, FRENTE, TEXA, Montador, adicionar_osso, base_osso, capsula,  # noqa: E402
                                   caixa, elipsoide, material, torno, tubo, uv_caixa)
@@ -600,7 +600,7 @@ def rosto(mt, cfg):
         fileira(z_boca1 - 0.01, "cabeca", 6, larg_boca * 0.85, 0.022, 0.025, "Dentes_Cima")
     # mandíbula (queixo) com o próprio volume
     mq = Massa(0.008)
-    # o queixo cobre a placa de metal da mandíbula do colega (fica na frente dela) e deixa os dentes de baixo à mostra
+    # o queixo cobre a placa de metal da mandíbula do endoesqueleto (fica na frente dela) e deixa os dentes de baixo à mostra
     zq = (z_boca0 + z_dinf[0]) / 2 - 0.004
     rq = (larg_boca * 1.04, max(fr[1] * 0.7, 0.03), (z_dinf[0] - z_boca0) * 0.62 + 0.014)
     y_frente_q = min(frente_y(0, zq), mand_mn.y) - 0.012
@@ -715,7 +715,7 @@ def _grupo_dedo(origem):
 
 def criar_ossos_dedos(mt):
     """
-    O colega modelou cada dedo em segmentos (3 dedos + polegar por mão). Aqui cada dedo ganha 2 ossos
+    No endoesqueleto, cada dedo é feito de segmentos (3 dedos + polegar por mão). Aqui cada dedo ganha 2 ossos
     (base e ponta) no eixo real das peças dele, e as peças passam a seguir esses ossos.
     """
     arm = mt.arm
