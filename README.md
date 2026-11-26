@@ -59,11 +59,11 @@ Para testar à vontade, **Ctrl+Shift+D** durante a partida liga as teclas de dep
 
 ![Tito e Pipoca no Blender](imagens/personagens_blender.jpg)
 
-Todo o conteúdo 3D foi gerado por scripts Python dentro do Blender: o prédio, os móveis, os disjuntores, as máquinas do fliperama e os animatrônicos. Assim, qualquer ajuste é só mudar o script e gerar de novo.
+Todo o 3D foi feito no Blender: o prédio, os móveis, os disjuntores, as máquinas do fliperama e os animatrônicos, com texturas e iluminação pensadas para a pizzaria parecer alegre de dia e sinistra no escuro.
 
-Os animatrônicos começam pelo **endoesqueleto**, o esqueleto mecânico de metal com todas as articulações. Por cima dele vem a fantasia de pelúcia, modelada como um volume único e depois cortada nas juntas, como uma fantasia de verdade. Cada pedaço fica preso a um osso, e pelas frestas dá para ver o metal trabalhando. As texturas misturam uma pelúcia de banco livre com um pelo curto gerado no próprio Blender e "assado" num mapa de relevo.
+Os animatrônicos começam pelo **endoesqueleto**, o esqueleto mecânico de metal com todas as articulações. Por cima dele vem a fantasia de pelúcia, modelada como um volume único e depois cortada nas juntas, como uma fantasia de verdade. Cada pedaço fica preso a um osso, e pelas frestas dá para ver o metal trabalhando. As texturas misturam uma pelúcia de banco livre com um pelo curto feito no próprio Blender e "assado" num mapa de relevo.
 
-As animações (parado, andar, perseguir, procurar, jumpscare e, na Pipoca, atordoada) também são geradas por script. As pernas usam cinemática inversa para os pés ficarem plantados no chão, e o resto do corpo se mexe aos trancos, como os servo-motores de um animatrônico. No jogo, a velocidade da animação acompanha a velocidade real do personagem, e a cabeça e os olhos seguem o jogador por código.
+As animações (parado, andar, perseguir, procurar, jumpscare e, na Pipoca, atordoada) foram feitas em cima do rig do endoesqueleto. As pernas usam cinemática inversa para os pés ficarem plantados no chão, e o resto do corpo se mexe aos trancos, como os servo-motores de um animatrônico. No jogo, a velocidade da animação acompanha a velocidade real do personagem, e a cabeça e os olhos seguem o jogador por código.
 
 ## Rodando pelo código-fonte
 
@@ -75,8 +75,7 @@ As animações (parado, andar, perseguir, procurar, jumpscare e, na Pipoca, ator
 |---|---|
 | `godot/` | o projeto do jogo (cenas, scripts e assets) |
 | `godot/scripts/` | `jogador.gd` (o vigia), `tito.gd` e `pipoca.gd` (a IA), `animatronico.gd` (o que os dois têm em comum), `jogo.gd` (relógio, vitória e derrota) |
-| `blender/` | arquivos `.blend` e os scripts que geram o cenário, os personagens e as animações |
-| `ferramentas/` | scripts auxiliares de texturas e sons |
+| `blender/` | os arquivos `.blend` do cenário e dos personagens |
 
 Os `.blend` com as texturas empacotadas, que abrem em qualquer computador, estão no arquivo `TurnoDaNoite_Blender_texturas_empacotadas.zip` das Releases.
 
