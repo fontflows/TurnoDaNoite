@@ -1,0 +1,142 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="Barra_Fundo"]
+bg_color = Color(0.05, 0.05, 0.06, 0.75)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.55, 0.45, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="Barra_Cheia"]
+bg_color = Color(0.9, 0.68, 0.22, 1)
+
+[node name="HUD" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_script")
+
+[node name="Relogio" type="Label" parent="."]
+theme_type_variation = &"RotuloHUD"
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -260.0
+offset_top = 14.0
+offset_right = -24.0
+offset_bottom = 74.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 62
+text = "00:00"
+horizontal_alignment = 2
+
+[node name="Disjuntores" type="Label" parent="."]
+theme_type_variation = &"RotuloHUD"
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 324.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Disjuntores: 0/4"
+
+[node name="Bateria" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -84.0
+offset_right = 284.0
+offset_bottom = -24.0
+grow_vertical = 0
+
+[node name="Titulo" type="Label" parent="Bateria"]
+theme_type_variation = &"RotuloHUD"
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.85, 0.8, 0.7, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "BATERIA"
+
+[node name="Barra" type="ProgressBar" parent="Bateria"]
+layout_mode = 0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 46.0
+theme_override_styles/background = SubResource("Barra_Fundo")
+theme_override_styles/fill = SubResource("Barra_Cheia")
+value = 100.0
+show_percentage = false
+
+[node name="Porcentagem" type="Label" parent="Bateria"]
+theme_type_variation = &"RotuloHUD"
+layout_mode = 0
+offset_left = 208.0
+offset_top = 22.0
+offset_right = 268.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "100%"
+
+[node name="Mira" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.7)
+
+[node name="Dica" type="Label" parent="."]
+theme_type_variation = &"RotuloHUD"
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.6, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+
+[node name="Mensagem" type="Label" parent="."]
+theme_type_variation = &"RotuloHUD"
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 150.0
+offset_bottom = 210.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 54
+horizontal_alignment = 1
+
+[node name="SomBadalada" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0

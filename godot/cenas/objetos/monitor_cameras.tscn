@@ -1,0 +1,116 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/monitor_cameras.gd" id="1_script"]
+[ext_resource type="Shader" path="res://assets/shaders/estatica.gdshader" id="2_estatica"]
+[ext_resource type="AudioStream" path="res://assets/sons/estatica.wav" id="3_som"]
+
+[sub_resource type="BoxShape3D" id="Caixa"]
+size = Vector3(0.7, 0.7, 0.9)
+
+[sub_resource type="ShaderMaterial" id="Material_Estatica_Monitor"]
+shader = ExtResource("2_estatica")
+shader_parameter/intensidade = 0.22
+shader_parameter/cor_fundo = Color(0, 0, 0, 0.3)
+shader_parameter/velocidade = 24.0
+shader_parameter/tamanho_grao = 3.0
+
+[node name="MonitorCameras" type="Area3D"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_script")
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+shape = SubResource("Caixa")
+
+[node name="SomEstatica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_som")
+volume_db = -20.0
+
+[node name="Tela" type="CanvasLayer" parent="."]
+layer = 15
+
+[node name="Fundo" type="ColorRect" parent="Tela"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Imagem" type="TextureRect" parent="Tela"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 40.0
+offset_right = -60.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estatica" type="ColorRect" parent="Tela"]
+material = SubResource("Material_Estatica_Monitor")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 40.0
+offset_right = -60.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="NomeCamera" type="Label" parent="Tela"]
+theme_type_variation = &"RotuloHUD"
+offset_left = 90.0
+offset_top = 60.0
+offset_right = 600.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.85, 1, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 38
+text = "CAM 1 - Palco"
+
+[node name="Rec" type="Label" parent="Tela"]
+theme_type_variation = &"RotuloHUD"
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 60.0
+offset_right = -90.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.25, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 34
+text = "● REC"
+horizontal_alignment = 2
+
+[node name="Ajuda" type="Label" parent="Tela"]
+theme_type_variation = &"RotuloHUD"
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -90.0
+offset_right = 300.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.85, 0.85, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 28
+text = "Q: trocar câmera   ·   E ou ESC: sair"
+horizontal_alignment = 1

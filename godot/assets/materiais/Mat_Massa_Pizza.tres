@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=1 format=3]
+
+[resource]
+resource_name = "Mat_Massa_Pizza"
+albedo_color = Color(0.8784, 0.7529, 0.5412, 1)
+roughness = 0.8

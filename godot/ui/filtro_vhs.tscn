@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/filtro_vhs.gd" id="1_script"]
+[ext_resource type="Shader" path="res://assets/shaders/vhs.gdshader" id="2_vhs"]
+
+[sub_resource type="ShaderMaterial" id="Material_VHS"]
+shader = ExtResource("2_vhs")
+shader_parameter/intensidade = 0.6
+shader_parameter/gamma = 1.0
+
+[node name="FiltroVHS" type="CanvasLayer"]
+process_mode = 3
+layer = 100
+script = ExtResource("1_script")
+
+[node name="Tela" type="ColorRect" parent="."]
+material = SubResource("Material_VHS")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Dificuldade" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dificuldade.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+nome = "Fácil"
+luz_ambiente = 1.6
+segundos_por_hora = 200.0
+checkpoint_por_disjuntor = true
+duracao_bateria_s = 180.0
+pilhas_no_mapa = 6
+recarga_pilha = 40.0
+bateria_fraca = 30.0
+bateria_falhando = 15.0
+duracao_stamina_s = 9
+fichas_no_mapa = 8
+fichas_iniciais = 2
+reaparecer_ficha_s = 90.0
+forca_garra = 0.9
+tempo_garra_s = 25.0
+velocidade_rivais_kart = 0.8
+embaralhar_fios = false
+multiplicador_velocidade = 0.7
+multiplicador_sentidos = 0.7
+chance_checar_esconderijo = 0.1
+intensidade_diretor = 0.15
+nivel_sorteio = 0

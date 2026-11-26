@@ -1,0 +1,15 @@
+# Cache do Godot (é recriado sozinho ao abrir o projeto)
+godot/.godot/
+
+# Executáveis (ficam nas Releases do GitHub)
+builds/
+APRESENTACAO/
+
+# Backups automáticos do Blender e cache do Python
+*.blend1
+__pycache__/
+
+# Documentos internos do processo (só os créditos vão para o repositório)
+docs/*
+!docs/CREDITOS.md
+godot/assets/arte_externa/**/*.md

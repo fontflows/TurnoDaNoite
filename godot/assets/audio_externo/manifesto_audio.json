@@ -1,0 +1,369 @@
+{
+ "audios": [
+  {
+   "id": "AUD-V01..11",
+   "arquivos": [
+    "voz_recado_01",
+    "voz_recado_02",
+    "voz_recado_03",
+    "voz_recado_04",
+    "voz_recado_05",
+    "voz_recado_06",
+    "voz_recado_07",
+    "voz_recado_08",
+    "voz_recado_09",
+    "voz_recado_10",
+    "voz_recado_11"
+   ],
+   "pasta": "voz",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "secretaria_gerente"
+  },
+  {
+   "id": "AUD-V12",
+   "arquivos": [
+    "voz_maquina_inicio",
+    "voz_maquina_fim"
+   ],
+   "pasta": "voz",
+   "prioridade": "Baixa",
+   "loop": false,
+   "substitui": "secretaria_maquina"
+  },
+  {
+   "id": "AUD-E01",
+   "arquivos": [
+    "resp_ofegante_01",
+    "resp_ofegante_02",
+    "resp_ofegante_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "ofegante"
+  },
+  {
+   "id": "AUD-E02",
+   "arquivos": [
+    "resp_recuperando_01",
+    "resp_recuperando_02"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "recuperando"
+  },
+  {
+   "id": "AUD-E03",
+   "arquivos": [
+    "resp_segurando_01",
+    "resp_segurando_02"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "segurando"
+  },
+  {
+   "id": "AUD-E04",
+   "arquivos": [
+    "resp_soltando_01",
+    "resp_soltando_02"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "soltando"
+  },
+  {
+   "id": "AUD-E05",
+   "arquivos": [
+    "resp_escondido_loop"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": true,
+   "substitui": "escondido"
+  },
+  {
+   "id": "AUD-E06",
+   "arquivos": [
+    "batimento_loop"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": true,
+   "substitui": "batimento"
+  },
+  {
+   "id": "AUD-E07",
+   "arquivos": [
+    "passo_azulejo_01",
+    "passo_azulejo_02",
+    "passo_azulejo_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "passo_azulejo"
+  },
+  {
+   "id": "AUD-E08",
+   "arquivos": [
+    "passo_carpete_01",
+    "passo_carpete_02",
+    "passo_carpete_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "passo_carpete"
+  },
+  {
+   "id": "AUD-E09",
+   "arquivos": [
+    "passo_concreto_01",
+    "passo_concreto_02",
+    "passo_concreto_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "passo_concreto"
+  },
+  {
+   "id": "AUD-E10",
+   "arquivos": [
+    "passo_madeira_01",
+    "passo_madeira_02",
+    "passo_madeira_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "passo_madeira"
+  },
+  {
+   "id": "AUD-E11",
+   "arquivos": [
+    "passo_metal_01",
+    "passo_metal_02",
+    "passo_metal_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "passo_metal"
+  },
+  {
+   "id": "AUD-E12",
+   "arquivos": [
+    "tito_passo_01",
+    "tito_passo_02",
+    "tito_passo_03"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "tito_passo"
+  },
+  {
+   "id": "AUD-E13",
+   "arquivos": [
+    "pipoca_servo_loop"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": true,
+   "substitui": "pipoca_chiado"
+  },
+  {
+   "id": "AUD-E14",
+   "arquivos": [
+    "pipoca_pane"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "pipoca_pane"
+  },
+  {
+   "id": "AUD-E15",
+   "arquivos": [
+    "jumpscare"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "jumpscare"
+  },
+  {
+   "id": "AUD-E16",
+   "arquivos": [
+    "armario_entrar",
+    "armario_sair"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Alta",
+   "loop": false,
+   "substitui": "armario"
+  },
+  {
+   "id": "AUD-E17",
+   "arquivos": [
+    "tecido_esconder"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "tecido"
+  },
+  {
+   "id": "AUD-E18",
+   "arquivos": [
+    "porta_rangido"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "porta_rangido"
+  },
+  {
+   "id": "AUD-E19",
+   "arquivos": [
+    "porta_trancada"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "porta_trancada"
+  },
+  {
+   "id": "AUD-E20",
+   "arquivos": [
+    "porta_aco"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "porta_aco"
+  },
+  {
+   "id": "AUD-E21",
+   "arquivos": [
+    "corrente_cortada"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "corrente_cortada"
+  },
+  {
+   "id": "AUD-E22",
+   "arquivos": [
+    "gerador_partida"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "gerador_partida"
+  },
+  {
+   "id": "AUD-E23",
+   "arquivos": [
+    "disjuntor_clique"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "disjuntor_clique"
+  },
+  {
+   "id": "AUD-E24",
+   "arquivos": [
+    "vidro_quebrando"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "vidro_quebrando"
+  },
+  {
+   "id": "AUD-E25",
+   "arquivos": [
+    "lata_batendo"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "lata_batendo"
+  },
+  {
+   "id": "AUD-E26",
+   "arquivos": [
+    "duto_rastejar"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "duto_rastejar"
+  },
+  {
+   "id": "AUD-E27",
+   "arquivos": [
+    "grade_duto"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "grade_duto"
+  },
+  {
+   "id": "AUD-E28",
+   "arquivos": [
+    "ficha",
+    "pegar_item"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Baixa",
+   "loop": false,
+   "substitui": "itens"
+  },
+  {
+   "id": "AUD-E29",
+   "arquivos": [
+    "lanterna_clique"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Baixa",
+   "loop": false,
+   "substitui": "lanterna_clique"
+  },
+  {
+   "id": "AUD-E30",
+   "arquivos": [
+    "susto_batida_metal",
+    "susto_brinquedo"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Média",
+   "loop": false,
+   "substitui": "sustos"
+  },
+  {
+   "id": "AUD-E31",
+   "arquivos": [
+    "goteira_loop",
+    "ventilacao_loop",
+    "geladeira_loop",
+    "vento_loop",
+    "zumbido_lampada_loop"
+   ],
+   "pasta": "efeitos",
+   "prioridade": "Baixa",
+   "loop": true,
+   "substitui": "ambientes"
+  }
+ ]
+}

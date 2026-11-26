@@ -1,0 +1,10 @@
+{
+  "tito": {
+    "andar": 0.588,
+    "perseguir": 1.091
+  },
+  "pipoca": {
+    "andar": 1.176,
+    "perseguir": 3.059
+  }
+}

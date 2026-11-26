@@ -1,0 +1,271 @@
+[gd_scene format=3]
+
+[node name="Controles" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = -250.0
+offset_right = 520.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Coluna" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Titulo" type="Label" parent="Coluna"]
+theme_type_variation = &"RotuloLetreiro"
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.4, 1)
+theme_override_font_sizes/font_size = 30
+text = "CONTROLES"
+horizontal_alignment = 1
+
+[node name="Grade" type="GridContainer" parent="Coluna"]
+layout_mode = 2
+theme_override_constants/h_separation = 18
+theme_override_constants/v_separation = 6
+columns = 4
+
+[node name="Tecla_Andar" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "W A S D"
+
+[node name="Acao_Andar" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Andar"
+autowrap_mode = 3
+
+[node name="Tecla_Olhar" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Mouse"
+
+[node name="Acao_Olhar" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Olhar"
+autowrap_mode = 3
+
+[node name="Tecla_Correr" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Shift"
+
+[node name="Acao_Correr" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Correr (gasta fôlego e faz barulho)"
+autowrap_mode = 3
+
+[node name="Tecla_Agachar" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Ctrl (segurar)"
+
+[node name="Acao_Agachar" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Agachar (silencioso; passa sob mesas)"
+autowrap_mode = 3
+
+[node name="Tecla_Respirar" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Alt (segurar)"
+
+[node name="Acao_Respirar" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Prender a respiração (escondido)"
+autowrap_mode = 3
+
+[node name="Tecla_Lanterna" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "F"
+
+[node name="Acao_Lanterna" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Ligar/desligar a lanterna"
+autowrap_mode = 3
+
+[node name="Tecla_Sacudir" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "R"
+
+[node name="Acao_Sacudir" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Sacudir a lanterna fraca"
+autowrap_mode = 3
+
+[node name="Tecla_Interagir" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "E"
+
+[node name="Acao_Interagir" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Interagir · esconder · sair do esconderijo"
+autowrap_mode = 3
+
+[node name="Tecla_Arremessar" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "G"
+
+[node name="Acao_Arremessar" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Arremessar lata (distrai a Pipoca)"
+autowrap_mode = 3
+
+[node name="Tecla_Mapa" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "M"
+
+[node name="Acao_Mapa" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Mapa e diário do vigia"
+autowrap_mode = 3
+
+[node name="Tecla_Inventario" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Tab (segurar)"
+
+[node name="Acao_Inventario" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Inventário e senha descoberta"
+autowrap_mode = 3
+
+[node name="Tecla_Objetivo" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "O"
+
+[node name="Acao_Objetivo" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Destacar o objetivo"
+autowrap_mode = 3
+
+[node name="Tecla_Camera" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Q"
+
+[node name="Acao_Camera" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Trocar câmera no monitor"
+autowrap_mode = 3
+
+[node name="Tecla_Minigame" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "Espaço"
+
+[node name="Acao_Minigame" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Ação nos minigames"
+autowrap_mode = 3
+
+[node name="Tecla_Pausa" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "ESC"
+
+[node name="Acao_Pausa" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Pausar / sair (monitor, minigame)"
+autowrap_mode = 3
+
+[node name="Tecla_TelaCheia" type="Label" parent="Coluna/Grade"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.45, 1)
+theme_override_font_sizes/font_size = 19
+text = "F11"
+
+[node name="Acao_TelaCheia" type="Label" parent="Coluna/Grade"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_font_sizes/font_size = 19
+text = "Tela cheia"
+autowrap_mode = 3
+
+[node name="Dica" type="Label" parent="Coluna"]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.82, 0.75, 1)
+theme_override_font_sizes/font_size = 17
+text = "Siga o objetivo no canto da tela e o mapa (M). Religue os 4 disjuntores, ligue o gerador e feche a porta de aço da sala de segurança. Segure a lanterna na Pipoca para atordoá-la; o Tito só anda quando você não o enxerga."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BotaoVoltar" type="Button" parent="Coluna"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Voltar"

@@ -1,0 +1,443 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dhq2rjywst1jx"
+path="res://.godot/imported/v2_diversao.glb-a838022125cb59e71b01bbbcf9d9d373.scn"
+
+[deps]
+
+source_file="res://assets/cenario/v2_diversao.glb"
+dest_files=["res://.godot/imported/v2_diversao.glb-a838022125cb59e71b01bbbcf9d9d373.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Mat_Arcade_Fantasminha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Fantasminha.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Fantasminha.tres"
+},
+"Mat_Arcade_Fantasminha_Detalhe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Fantasminha_Detalhe.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Fantasminha_Detalhe.tres"
+},
+"Mat_Arcade_Pipoca_Pula_Pula": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Pipoca_Pula_Pula.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Pipoca_Pula_Pula.tres"
+},
+"Mat_Arcade_Pipoca_Pula_Pula_Detalhe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Pipoca_Pula_Pula_Detalhe.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Pipoca_Pula_Pula_Detalhe.tres"
+},
+"Mat_Arcade_Serpente_Neon": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Serpente_Neon.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Serpente_Neon.tres"
+},
+"Mat_Arcade_Serpente_Neon_Detalhe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Serpente_Neon_Detalhe.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Serpente_Neon_Detalhe.tres"
+},
+"Mat_Arcade_Space_Pizza": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Space_Pizza.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Space_Pizza.tres"
+},
+"Mat_Arcade_Space_Pizza_Detalhe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Space_Pizza_Detalhe.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Space_Pizza_Detalhe.tres"
+},
+"Mat_Arcade_Tito_Kart": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Tito_Kart.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Tito_Kart.tres"
+},
+"Mat_Arcade_Tito_Kart_Detalhe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Arcade_Tito_Kart_Detalhe.tres",
+"use_external/path": "res://assets/materiais/Mat_Arcade_Tito_Kart_Detalhe.tres"
+},
+"Mat_Bola_Madeira": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Bola_Madeira.tres",
+"use_external/path": "res://assets/materiais/Mat_Bola_Madeira.tres"
+},
+"Mat_Caixa_Pizza": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Caixa_Pizza.tres",
+"use_external/path": "res://assets/materiais/Mat_Caixa_Pizza.tres"
+},
+"Mat_Capsula_Chave": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Capsula_Chave.tres",
+"use_external/path": "res://assets/materiais/Mat_Capsula_Chave.tres"
+},
+"Mat_Cinza_Forno": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Cinza_Forno.tres",
+"use_external/path": "res://assets/materiais/Mat_Cinza_Forno.tres"
+},
+"Mat_Cobre": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Cobre.tres",
+"use_external/path": "res://assets/materiais/Mat_Cobre.tres"
+},
+"Mat_Concreto_Sujo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Concreto_Sujo.tres",
+"use_external/path": "res://assets/materiais/Mat_Concreto_Sujo.tres"
+},
+"Mat_Disjuntor_Alavanca": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Disjuntor_Alavanca.tres",
+"use_external/path": "res://assets/materiais/Mat_Disjuntor_Alavanca.tres"
+},
+"Mat_Disjuntor_Caixa": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Disjuntor_Caixa.tres",
+"use_external/path": "res://assets/materiais/Mat_Disjuntor_Caixa.tres"
+},
+"Mat_Engradado": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Engradado.tres",
+"use_external/path": "res://assets/materiais/Mat_Engradado.tres"
+},
+"Mat_Espelho": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Espelho.tres",
+"use_external/path": "res://assets/materiais/Mat_Espelho.tres"
+},
+"Mat_Farinha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Farinha.tres",
+"use_external/path": "res://assets/materiais/Mat_Farinha.tres"
+},
+"Mat_Fio_Amarelo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Fio_Amarelo.tres",
+"use_external/path": "res://assets/materiais/Mat_Fio_Amarelo.tres"
+},
+"Mat_Fio_Azul": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Fio_Azul.tres",
+"use_external/path": "res://assets/materiais/Mat_Fio_Azul.tres"
+},
+"Mat_Fio_Vermelho": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Fio_Vermelho.tres",
+"use_external/path": "res://assets/materiais/Mat_Fio_Vermelho.tres"
+},
+"Mat_Garra_Corpo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Garra_Corpo.tres",
+"use_external/path": "res://assets/materiais/Mat_Garra_Corpo.tres"
+},
+"Mat_Garra_Detalhe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Garra_Detalhe.tres",
+"use_external/path": "res://assets/materiais/Mat_Garra_Detalhe.tres"
+},
+"Mat_Gelo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Gelo.tres",
+"use_external/path": "res://assets/materiais/Mat_Gelo.tres"
+},
+"Mat_Giz_Azul": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Giz_Azul.tres",
+"use_external/path": "res://assets/materiais/Mat_Giz_Azul.tres"
+},
+"Mat_Giz_Rosa": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Giz_Rosa.tres",
+"use_external/path": "res://assets/materiais/Mat_Giz_Rosa.tres"
+},
+"Mat_Gordura": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Gordura.tres",
+"use_external/path": "res://assets/materiais/Mat_Gordura.tres"
+},
+"Mat_Inox": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Inox.tres",
+"use_external/path": "res://assets/materiais/Mat_Inox.tres"
+},
+"Mat_Lampada_Apagada": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Lampada_Apagada.tres",
+"use_external/path": "res://assets/materiais/Mat_Lampada_Apagada.tres"
+},
+"Mat_Lampada_Fluorescente": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Lampada_Fluorescente.tres",
+"use_external/path": "res://assets/materiais/Mat_Lampada_Fluorescente.tres"
+},
+"Mat_Led_Disjuntor": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Led_Disjuntor.tres",
+"use_external/path": "res://assets/materiais/Mat_Led_Disjuntor.tres"
+},
+"Mat_Lenha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Lenha.tres",
+"use_external/path": "res://assets/materiais/Mat_Lenha.tres"
+},
+"Mat_Louca_Branca": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Louca_Branca.tres",
+"use_external/path": "res://assets/materiais/Mat_Louca_Branca.tres"
+},
+"Mat_Luz_Ficha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Luz_Ficha.tres",
+"use_external/path": "res://assets/materiais/Mat_Luz_Ficha.tres"
+},
+"Mat_Luz_Fria": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Luz_Fria.tres",
+"use_external/path": "res://assets/materiais/Mat_Luz_Fria.tres"
+},
+"Mat_Luz_Geladeira": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Luz_Geladeira.tres",
+"use_external/path": "res://assets/materiais/Mat_Luz_Geladeira.tres"
+},
+"Mat_Madeira_Clara": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Madeira_Clara.tres",
+"use_external/path": "res://assets/materiais/Mat_Madeira_Clara.tres"
+},
+"Mat_Madeira_Envernizada": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Madeira_Envernizada.tres",
+"use_external/path": "res://assets/materiais/Mat_Madeira_Envernizada.tres"
+},
+"Mat_Madeira_Velha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Madeira_Velha.tres",
+"use_external/path": "res://assets/materiais/Mat_Madeira_Velha.tres"
+},
+"Mat_Mesa_Hoquei": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Mesa_Hoquei.tres",
+"use_external/path": "res://assets/materiais/Mat_Mesa_Hoquei.tres"
+},
+"Mat_Metal_Cinza": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Metal_Cinza.tres",
+"use_external/path": "res://assets/materiais/Mat_Metal_Cinza.tres"
+},
+"Mat_Metal_Escuro": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Metal_Escuro.tres",
+"use_external/path": "res://assets/materiais/Mat_Metal_Escuro.tres"
+},
+"Mat_Metal_Pintado_Amarelo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Metal_Pintado_Amarelo.tres",
+"use_external/path": "res://assets/materiais/Mat_Metal_Pintado_Amarelo.tres"
+},
+"Mat_Neon_Ciano": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Neon_Ciano.tres",
+"use_external/path": "res://assets/materiais/Mat_Neon_Ciano.tres"
+},
+"Mat_Neon_Rosa": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Neon_Rosa.tres",
+"use_external/path": "res://assets/materiais/Mat_Neon_Rosa.tres"
+},
+"Mat_PVC_Tiras": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_PVC_Tiras.tres",
+"use_external/path": "res://assets/materiais/Mat_PVC_Tiras.tres"
+},
+"Mat_Papel_Amarelo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Papel_Amarelo.tres",
+"use_external/path": "res://assets/materiais/Mat_Papel_Amarelo.tres"
+},
+"Mat_Papel_Branco": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Papel_Branco.tres",
+"use_external/path": "res://assets/materiais/Mat_Papel_Branco.tres"
+},
+"Mat_Papel_Toalha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Papel_Toalha.tres",
+"use_external/path": "res://assets/materiais/Mat_Papel_Toalha.tres"
+},
+"Mat_Papelao_Caixa": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Papelao_Caixa.tres",
+"use_external/path": "res://assets/materiais/Mat_Papelao_Caixa.tres"
+},
+"Mat_Pinball_Mesa": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Pinball_Mesa.tres",
+"use_external/path": "res://assets/materiais/Mat_Pinball_Mesa.tres"
+},
+"Mat_Pinball_Vidro": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Pinball_Vidro.tres",
+"use_external/path": "res://assets/materiais/Mat_Pinball_Vidro.tres"
+},
+"Mat_Pipoca_Branco": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Pipoca_Branco.tres",
+"use_external/path": "res://assets/materiais/Mat_Pipoca_Branco.tres"
+},
+"Mat_Pipoca_Lilas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Pipoca_Lilas.tres",
+"use_external/path": "res://assets/materiais/Mat_Pipoca_Lilas.tres"
+},
+"Mat_Placar_Led": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Placar_Led.tres",
+"use_external/path": "res://assets/materiais/Mat_Placar_Led.tres"
+},
+"Mat_Plastico_Amarelo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Amarelo.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Amarelo.tres"
+},
+"Mat_Plastico_Azul": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Azul.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Azul.tres"
+},
+"Mat_Plastico_Branco": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Branco.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Branco.tres"
+},
+"Mat_Plastico_Laranja": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Laranja.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Laranja.tres"
+},
+"Mat_Plastico_Lilas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Lilas.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Lilas.tres"
+},
+"Mat_Plastico_Preto": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Preto.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Preto.tres"
+},
+"Mat_Plastico_Rosa": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Rosa.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Rosa.tres"
+},
+"Mat_Plastico_Verde": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Verde.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Verde.tres"
+},
+"Mat_Plastico_Vermelho": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Plastico_Vermelho.tres",
+"use_external/path": "res://assets/materiais/Mat_Plastico_Vermelho.tres"
+},
+"Mat_Rachadura": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Rachadura.tres",
+"use_external/path": "res://assets/materiais/Mat_Rachadura.tres"
+},
+"Mat_Teia": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Teia.tres",
+"use_external/path": "res://assets/materiais/Mat_Teia.tres"
+},
+"Mat_Tela_Arcade_Desligada": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Tela_Arcade_Desligada.tres",
+"use_external/path": "res://assets/materiais/Mat_Tela_Arcade_Desligada.tres"
+},
+"Mat_Teto_Escuro": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Teto_Escuro.tres",
+"use_external/path": "res://assets/materiais/Mat_Teto_Escuro.tres"
+},
+"Mat_Texto_Branco": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Texto_Branco.tres",
+"use_external/path": "res://assets/materiais/Mat_Texto_Branco.tres"
+},
+"Mat_Texto_Preto": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Texto_Preto.tres",
+"use_external/path": "res://assets/materiais/Mat_Texto_Preto.tres"
+},
+"Mat_Ticket": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Ticket.tres",
+"use_external/path": "res://assets/materiais/Mat_Ticket.tres"
+},
+"Mat_Tijolo_Forno": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Tijolo_Forno.tres",
+"use_external/path": "res://assets/materiais/Mat_Tijolo_Forno.tres"
+},
+"Mat_Tito_Bege": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Tito_Bege.tres",
+"use_external/path": "res://assets/materiais/Mat_Tito_Bege.tres"
+},
+"Mat_Tito_Marrom": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Tito_Marrom.tres",
+"use_external/path": "res://assets/materiais/Mat_Tito_Marrom.tres"
+},
+"Mat_Vidro_Aramado": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Vidro_Aramado.tres",
+"use_external/path": "res://assets/materiais/Mat_Vidro_Aramado.tres"
+},
+"Mat_Vidro_Vitrine": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materiais/Mat_Vidro_Vitrine.tres",
+"use_external/path": "res://assets/materiais/Mat_Vidro_Vitrine.tres"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

@@ -1,0 +1,340 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://scripts/mundo.gd" id="1_mundo"]
+[ext_resource type="PackedScene" path="res://assets/cenario/predio.glb" id="2_predio"]
+[ext_resource type="PackedScene" path="res://assets/cenario/moveis.glb" id="3_moveis"]
+[ext_resource type="PackedScene" path="res://assets/cenario/disjuntores.glb" id="4_disjuntores_modelo"]
+[ext_resource type="PackedScene" path="res://cenas/objetos/disjuntor.tscn" id="5_disjuntor"]
+[ext_resource type="PackedScene" path="res://cenas/objetos/pilha.tscn" id="6_pilha"]
+[ext_resource type="PackedScene" path="res://cenas/jogador.tscn" id="7_jogador"]
+[ext_resource type="PackedScene" path="res://ui/hud.tscn" id="8_hud"]
+[ext_resource type="Script" path="res://scripts/luz_piscante.gd" id="9_luz_piscante"]
+[ext_resource type="PackedScene" path="res://ui/pausa.tscn" id="10_pausa"]
+[ext_resource type="PackedScene" path="res://cenas/animatronicos/tito.tscn" id="11_tito"]
+[ext_resource type="PackedScene" path="res://cenas/animatronicos/pipoca.tscn" id="12_pipoca"]
+[ext_resource type="PackedScene" path="res://cenas/objetos/monitor_cameras.tscn" id="13_monitor"]
+[ext_resource type="Script" path="res://scripts/camera_seguranca.gd" id="14_camera_seguranca"]
+[ext_resource type="AudioStream" path="res://assets/sons/ambiente_grave.wav" id="15_ambiente"]
+[ext_resource type="AudioStream" path="res://assets/sons/zumbido_lampada.wav" id="16_zumbido"]
+[ext_resource type="AudioStream" path="res://assets/sons/musica_pizzaria.wav" id="17_musica"]
+
+[sub_resource type="Environment" id="Ambiente"]
+background_mode = 1
+background_color = Color(0, 0, 0, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.32, 0.42, 0.68, 1)
+ambient_light_energy = 0.38
+fog_enabled = true
+fog_light_color = Color(0.02, 0.025, 0.04, 1)
+fog_density = 0.035
+volumetric_fog_density = 0.025
+volumetric_fog_albedo = Color(0.6, 0.65, 0.75, 1)
+
+[sub_resource type="NavigationMesh" id="Malha_Navegacao"]
+geometry_parsed_geometry_type = 1
+geometry_collision_mask = 1
+cell_size = 0.2
+cell_height = 0.2
+agent_height = 2.0
+agent_radius = 0.4
+agent_max_climb = 0.2
+agent_max_slope = 40.0
+
+[sub_resource type="BoxShape3D" id="Caixa_Sala_Seguranca"]
+size = Vector3(7.6, 3, 10.6)
+
+[node name="Mundo" type="Node3D"]
+script = ExtResource("1_mundo")
+
+[node name="Ambiente" type="WorldEnvironment" parent="."]
+environment = SubResource("Ambiente")
+
+[node name="Navegacao" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("Malha_Navegacao")
+
+[node name="Predio" parent="Navegacao" instance=ExtResource("2_predio")]
+
+[node name="Moveis" parent="Navegacao" instance=ExtResource("3_moveis")]
+
+[node name="Disjuntores_Modelo" parent="." instance=ExtResource("4_disjuntores_modelo")]
+
+[node name="Disjuntores" type="Node3D" parent="."]
+
+[node name="Disjuntor_Cozinha" parent="Disjuntores" instance=ExtResource("5_disjuntor")]
+nome_area = "Cozinha"
+nome_modelo = "Disjuntor_Cozinha"
+modelos = NodePath("../../Disjuntores_Modelo")
+luzes_da_area = Array[NodePath]([NodePath("../../Luzes/Luz_Area_Cozinha")])
+
+[node name="Disjuntor_Deposito" parent="Disjuntores" instance=ExtResource("5_disjuntor")]
+nome_area = "Depósito"
+nome_modelo = "Disjuntor_Deposito"
+modelos = NodePath("../../Disjuntores_Modelo")
+luzes_da_area = Array[NodePath]([NodePath("../../Luzes/Luz_Area_Deposito")])
+
+[node name="Disjuntor_Fliperama" parent="Disjuntores" instance=ExtResource("5_disjuntor")]
+nome_area = "Fliperama"
+nome_modelo = "Disjuntor_Fliperama"
+modelos = NodePath("../../Disjuntores_Modelo")
+luzes_da_area = Array[NodePath]([NodePath("../../Luzes/Luz_Area_Fliperama")])
+
+[node name="Disjuntor_Banheiros" parent="Disjuntores" instance=ExtResource("5_disjuntor")]
+nome_area = "Banheiros"
+nome_modelo = "Disjuntor_Banheiros"
+modelos = NodePath("../../Disjuntores_Modelo")
+luzes_da_area = Array[NodePath]([NodePath("../../Luzes/Luz_Area_Banheiros")])
+
+[node name="Luzes" type="Node3D" parent="."]
+
+[node name="Luz_Emergencia_Corredor_Oeste" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.55, 2.55, -0.5)
+light_color = Color(1, 0.15, 0.1, 1)
+light_energy = 0.45
+omni_range = 2.5
+omni_attenuation = 1.8
+
+[node name="Luz_Emergencia_Corredor_Leste" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.55, 2.55, -0.5)
+light_color = Color(1, 0.15, 0.1, 1)
+light_energy = 0.45
+omni_range = 2.5
+omni_attenuation = 1.8
+
+[node name="Luz_Emergencia_Fundos" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.55, 14.55)
+light_color = Color(1, 0.15, 0.1, 1)
+light_energy = 0.45
+omni_range = 2.5
+omni_attenuation = 1.8
+
+[node name="Luz_Emergencia_Sala_Seguranca" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.55, 2.55, 6.5)
+light_color = Color(1, 0.15, 0.1, 1)
+light_energy = 0.45
+omni_range = 2.5
+omni_attenuation = 1.8
+
+[node name="Luz_Emergencia_Palco" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55, -14.55)
+light_color = Color(1, 0.15, 0.1, 1)
+light_energy = 0.45
+omni_range = 2.5
+omni_attenuation = 1.8
+
+[node name="Holofote_Palco" type="SpotLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 0.970, 0.242, 0, -0.242, 0.970, 0, 3.0, -5)
+light_color = Color(0.75, 0.6, 1, 1)
+light_energy = 1.6
+spot_range = 14.0
+spot_angle = 30.0
+script = ExtResource("9_luz_piscante")
+ativa = false
+chance_falha_por_segundo = 0.2
+
+[node name="Luz_Corredor_Piscando" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, -0.5)
+light_color = Color(1, 0.85, 0.6, 1)
+light_energy = 0.6
+omni_range = 4.5
+script = ExtResource("9_luz_piscante")
+chance_falha_por_segundo = 0.6
+
+[node name="Luz_Monitor_Sala_Seguranca" type="OmniLight3D" parent="Luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 1.4, 6.5)
+light_color = Color(0.5, 0.9, 0.6, 1)
+light_energy = 0.6
+omni_range = 4.0
+
+[node name="Luz_Area_Cozinha" type="OmniLight3D" parent="Luzes" groups=["luz_area"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.85, -8.5)
+light_color = Color(1, 0.88, 0.65, 1)
+light_energy = 1.2
+omni_range = 9.0
+script = ExtResource("9_luz_piscante")
+ativa = false
+
+[node name="Luz_Area_Deposito" type="OmniLight3D" parent="Luzes" groups=["luz_area"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.85, -8.5)
+light_color = Color(1, 0.88, 0.65, 1)
+light_energy = 1.2
+omni_range = 9.0
+script = ExtResource("9_luz_piscante")
+ativa = false
+
+[node name="Luz_Area_Fliperama" type="OmniLight3D" parent="Luzes" groups=["luz_area"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 2.85, 6.5)
+light_color = Color(1, 0.88, 0.65, 1)
+light_energy = 1.2
+omni_range = 9.0
+script = ExtResource("9_luz_piscante")
+ativa = false
+
+[node name="Luz_Area_Banheiros" type="OmniLight3D" parent="Luzes" groups=["luz_area"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.85, 6.5)
+light_color = Color(1, 0.88, 0.65, 1)
+light_energy = 1.0
+omni_range = 7.0
+script = ExtResource("9_luz_piscante")
+ativa = false
+
+[node name="Claraboia_Luar_Salao" type="SpotLight3D" parent="Luzes" groups=["fonte_luz_ilha"]]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6, 3.1, -7)
+light_color = Color(0.55, 0.68, 1, 1)
+light_energy = 2.8
+light_volumetric_fog_energy = 2.0
+spot_range = 6.0
+spot_angle = 26.0
+spot_angle_attenuation = 2.0
+
+[node name="Claraboia_Luar_Fliperama" type="SpotLight3D" parent="Luzes" groups=["fonte_luz_ilha"]]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -11, 3.1, 8)
+light_color = Color(0.55, 0.68, 1, 1)
+light_energy = 2.6
+light_volumetric_fog_energy = 2.0
+spot_range = 6.0
+spot_angle = 24.0
+spot_angle_attenuation = 2.0
+
+[node name="Marcadores" type="Node3D" parent="."]
+
+[node name="SpawnJogador" type="Marker3D" parent="Marcadores"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.5, 0.05, 6.5)
+
+[node name="Palco_Tito" type="Marker3D" parent="Marcadores"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -13)
+
+[node name="Palco_Pipoca" type="Marker3D" parent="Marcadores"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.5, -13)
+
+[node name="Patrulha" type="Node3D" parent="Marcadores"]
+
+[node name="ponto_patrulha_01_Salao_Oeste" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -7)
+
+[node name="ponto_patrulha_02_Salao_Leste" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -7)
+
+[node name="ponto_patrulha_03_Cozinha" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -8)
+
+[node name="ponto_patrulha_04_Deposito" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -8)
+
+[node name="ponto_patrulha_05_Corredor_Oeste" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -0.5)
+
+[node name="ponto_patrulha_06_Corredor_Leste" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -0.5)
+
+[node name="ponto_patrulha_07_Fliperama" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 6.5)
+
+[node name="ponto_patrulha_08_Fundos" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 13.5)
+
+[node name="ponto_patrulha_09_Recepcao" type="Marker3D" parent="Marcadores/Patrulha" groups=["ponto_patrulha"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 8)
+
+[node name="Pilhas" type="Node3D" parent="."]
+
+[node name="Pilha_Deposito" parent="Pilhas" instance=ExtResource("6_pilha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8, 0, -13.8)
+
+[node name="Pilha_Fliperama" parent="Pilhas" instance=ExtResource("6_pilha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8, 0, 10.8)
+
+[node name="Pilha_Fundos" parent="Pilhas" instance=ExtResource("6_pilha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8, 0, 13.5)
+
+[node name="Pilha_Recepcao" parent="Pilhas" instance=ExtResource("6_pilha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8, 0, 14)
+
+[node name="Pilha_Cozinha" parent="Pilhas" instance=ExtResource("6_pilha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, 0, -3.2)
+
+[node name="Pilha_Sala_Seguranca" parent="Pilhas" instance=ExtResource("6_pilha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, 11)
+
+[node name="Sons" type="Node3D" parent="."]
+
+[node name="SomAmbiente" type="AudioStreamPlayer" parent="Sons"]
+stream = ExtResource("15_ambiente")
+volume_db = -12.0
+autoplay = true
+
+[node name="ZumbidoLampadaCorredor" type="AudioStreamPlayer3D" parent="Sons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, -0.5)
+stream = ExtResource("16_zumbido")
+volume_db = -8.0
+unit_size = 2.0
+max_distance = 12.0
+autoplay = true
+
+[node name="MusicaPalco" type="AudioStreamPlayer3D" parent="Sons" groups=["som_musica"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -13.5)
+stream = ExtResource("17_musica")
+volume_db = -6.0
+unit_size = 3.0
+max_distance = 25.0
+autoplay = true
+
+[node name="CamerasSeguranca" type="Node3D" parent="."]
+
+[node name="CAM 1 - Palco" type="Camera3D" parent="CamerasSeguranca"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, -2.6)
+fov = 60.0
+script = ExtResource("14_camera_seguranca")
+olhar_para = Vector3(0, 1.3, -13)
+
+[node name="CAM 2 - Salao" type="Camera3D" parent="CamerasSeguranca"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.9, -2.5)
+fov = 75.0
+script = ExtResource("14_camera_seguranca")
+olhar_para = Vector3(4, 0.8, -12)
+
+[node name="CAM 3 - Corredor" type="Camera3D" parent="CamerasSeguranca"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4, 2.9, -0.5)
+fov = 65.0
+script = ExtResource("14_camera_seguranca")
+olhar_para = Vector3(20, 1, -0.5)
+
+[node name="CAM 4 - Cozinha" type="Camera3D" parent="CamerasSeguranca"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6, 2.9, -2.6)
+fov = 75.0
+script = ExtResource("14_camera_seguranca")
+olhar_para = Vector3(-18, 0.8, -13)
+
+[node name="CAM 5 - Fliperama" type="Camera3D" parent="CamerasSeguranca"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6, 2.8, 1.6)
+fov = 75.0
+script = ExtResource("14_camera_seguranca")
+olhar_para = Vector3(-18, 0.8, 11)
+
+[node name="MonitorCameras" parent="." instance=ExtResource("13_monitor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85, 1.0, 6.5)
+no_moveis = NodePath("../Navegacao/Moveis")
+
+[node name="ZonaSalaSeguranca" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, 6.5)
+collision_layer = 0
+collision_mask = 2
+
+[node name="Colisao" type="CollisionShape3D" parent="ZonaSalaSeguranca"]
+shape = SubResource("Caixa_Sala_Seguranca")
+
+[node name="Animatronicos" type="Node3D" parent="."]
+
+[node name="Tito" parent="Animatronicos" instance=ExtResource("11_tito")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -13)
+ponto_palco = NodePath("../../Marcadores/Palco_Tito")
+
+[node name="Pipoca" parent="Animatronicos" instance=ExtResource("12_pipoca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.5, -13)
+ponto_palco = NodePath("../../Marcadores/Palco_Pipoca")
+
+[node name="Jogador" parent="." instance=ExtResource("7_jogador")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 5.5, 0.05, 6.5)
+
+[node name="HUD" parent="." instance=ExtResource("8_hud")]
+
+[node name="Pausa" parent="." instance=ExtResource("10_pausa")]

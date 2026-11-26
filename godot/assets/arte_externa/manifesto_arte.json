@@ -1,0 +1,455 @@
+{
+  "_comentario": "Lista oficial das artes externas (geradas no Gemini). O jogo e o ferramentas/verificar_arte.py leem este arquivo. As fichas completas estão em docs/PROMPTS_ARTE.md. Campos de texto (o JOGO escreve, nunca a imagem): texto (título) em posicao_texto (topo/centro/base) ou caixa_texto [x0, y0, x1, y1] de 0 a 1; linhas (corpo do texto, {D3}/{D4} = dígitos da senha) em caixa_linhas; itens = textos soltos em caixas. fundo_verde = o jogo apaga o verde (figura recortada).",
+  "artes": [
+    {
+      "id": "ARTE-01",
+      "arquivo": "painel_palco.jpg",
+      "pasta": "palco",
+      "prioridade": "Alta",
+      "proporcao": "21:9",
+      "onde": "Painel pintado no fundo do palco, atrás do Tito e da Pipoca",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-02",
+      "arquivo": "marquee_tito_kart.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Alta",
+      "proporcao": "21:9",
+      "onde": "Letreiro da máquina TITO KART (cores primárias; minigame de corrida)",
+      "texto": "TITO KART",
+      "posicao_texto": "centro"
+    },
+    {
+      "id": "ARTE-03",
+      "arquivo": "marquee_space_pizza.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Alta",
+      "proporcao": "21:9",
+      "onde": "Letreiro da máquina SPACE PIZZA (neon azul e laranja)",
+      "texto": "SPACE PIZZA",
+      "posicao_texto": "centro"
+    },
+    {
+      "id": "ARTE-04",
+      "arquivo": "marquee_pipoca_pula_pula.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Alta",
+      "proporcao": "21:9",
+      "onde": "Letreiro da máquina PIPOCA PULA-PULA (rosa e lilás)",
+      "texto": "PIPOCA PULA-PULA",
+      "posicao_texto": "centro"
+    },
+    {
+      "id": "ARTE-05",
+      "arquivo": "marquee_serpente_neon.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Alta",
+      "proporcao": "21:9",
+      "onde": "Letreiro da máquina SERPENTE NEON (verde neon)",
+      "texto": "SERPENTE NEON",
+      "posicao_texto": "centro"
+    },
+    {
+      "id": "ARTE-06",
+      "arquivo": "marquee_fantasminha.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Alta",
+      "proporcao": "21:9",
+      "onde": "Letreiro da máquina FANTASMINHA DO PORÃO (roxo e branco)",
+      "texto": "FANTASMINHA DO PORÃO",
+      "posicao_texto": "centro"
+    },
+    {
+      "id": "ARTE-07",
+      "arquivo": "poster_celebre.jpg",
+      "pasta": "posters",
+      "prioridade": "Alta",
+      "proporcao": "2:3",
+      "onde": "Sala de segurança, parede atrás da mesa",
+      "texto": "CELEBRE COM A GENTE!",
+      "posicao_texto": "topo"
+    },
+    {
+      "id": "ARTE-08",
+      "arquivo": "poster_sorria_camera.jpg",
+      "pasta": "posters",
+      "prioridade": "Alta",
+      "proporcao": "2:3",
+      "onde": "Sala de segurança, parede da porta norte",
+      "texto": "SORRIA! VOCÊ ESTÁ SENDO FILMADO",
+      "posicao_texto": "base"
+    },
+    {
+      "id": "ARTE-09",
+      "arquivo": "poster_pizza_quentinha.jpg",
+      "pasta": "posters",
+      "prioridade": "Alta",
+      "proporcao": "2:3",
+      "onde": "Sala de segurança, parede leste",
+      "texto": "PIZZA QUENTINHA!",
+      "posicao_texto": "topo"
+    },
+    {
+      "id": "ARTE-10",
+      "arquivo": "menu_fundo.jpg",
+      "pasta": "menu",
+      "prioridade": "Alta",
+      "proporcao": "16:9",
+      "onde": "Fundo do menu principal",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-11",
+      "arquivo": "tela_carregamento.jpg",
+      "pasta": "menu",
+      "prioridade": "Média",
+      "proporcao": "16:9",
+      "onde": "Tela de carregamento (entre a intro e o jogo)",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-12",
+      "arquivo": "poster_seja_feliz.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor principal, pôster 1",
+      "texto": "SEJA FELIZ NA PIZZARIA DO TITO!",
+      "posicao_texto": "base"
+    },
+    {
+      "id": "ARTE-13",
+      "arquivo": "poster_pipoca_pular.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor principal, pôster 2",
+      "texto": "PIPOCA ADORA PULAR!",
+      "posicao_texto": "topo"
+    },
+    {
+      "id": "ARTE-14",
+      "arquivo": "poster_pizza_dobro.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor principal, pôster 3",
+      "texto": "PIZZA EM DOBRO TODA SEXTA",
+      "posicao_texto": "base"
+    },
+    {
+      "id": "ARTE-15",
+      "arquivo": "poster_aniversario.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor principal, pôster 4",
+      "texto": "FESTA DE ANIVERSÁRIO",
+      "posicao_texto": "topo"
+    },
+    {
+      "id": "ARTE-16",
+      "arquivo": "lateral_arcade.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Média",
+      "proporcao": "9:16",
+      "onde": "Laterais das 5 máquinas de fliperama (o jogo muda a cor de cada uma)",
+      "texto": "",
+      "posicao_texto": "",
+      "recorte": [
+        0.165,
+        0.035,
+        0.785,
+        0.965
+      ]
+    },
+    {
+      "id": "ARTE-17",
+      "arquivo": "painel_maquina_garra.jpg",
+      "pasta": "fliperama",
+      "prioridade": "Média",
+      "proporcao": "1:1",
+      "onde": "Painel de cima da máquina de garra",
+      "texto": "PEGUE UM AMIGO!",
+      "posicao_texto": "base"
+    },
+    {
+      "id": "ARTE-18",
+      "arquivo": "cardapio.jpg",
+      "pasta": "decoracao",
+      "prioridade": "Média",
+      "proporcao": "3:4",
+      "onde": "Cardápio na parede atrás do balcão da recepção (o jogo escreve o título na faixa de cima e os itens nos quadros brancos)",
+      "texto": "CARDÁPIO",
+      "posicao_texto": "topo",
+      "caixa_texto": [
+        0.3,
+        0.012,
+        0.7,
+        0.095
+      ],
+      "itens": [
+        {
+          "texto": "FATIA DE CALABRESA\nCz$ 45,00",
+          "caixa": [
+            0.385,
+            0.123,
+            0.87,
+            0.24
+          ],
+          "fonte": "redonda",
+          "cor": "#5a1e14"
+        },
+        {
+          "texto": "FATIA DE MUSSARELA\nCz$ 40,00",
+          "caixa": [
+            0.385,
+            0.287,
+            0.87,
+            0.404
+          ],
+          "fonte": "redonda",
+          "cor": "#5a1e14"
+        },
+        {
+          "texto": "REFRI GELADO\nCz$ 20,00",
+          "caixa": [
+            0.385,
+            0.451,
+            0.87,
+            0.568
+          ],
+          "fonte": "redonda",
+          "cor": "#5a1e14"
+        },
+        {
+          "texto": "SORVETE DO TITO\nCz$ 25,00",
+          "caixa": [
+            0.385,
+            0.615,
+            0.87,
+            0.732
+          ],
+          "fonte": "redonda",
+          "cor": "#5a1e14"
+        },
+        {
+          "texto": "BOLO DA PIPOCA\nCz$ 30,00",
+          "caixa": [
+            0.385,
+            0.778,
+            0.87,
+            0.895
+          ],
+          "fonte": "redonda",
+          "cor": "#5a1e14"
+        }
+      ]
+    },
+    {
+      "id": "ARTE-19",
+      "arquivo": "desenho_crianca_amigos.jpg",
+      "pasta": "decoracao",
+      "prioridade": "Baixa",
+      "proporcao": "4:3",
+      "onde": "Desenho de criança preso no painel de avisos da sala de segurança",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-20",
+      "arquivo": "desenho_crianca_vigia.jpg",
+      "pasta": "decoracao",
+      "prioridade": "Baixa",
+      "proporcao": "4:3",
+      "onde": "Desenho de criança colado na parede da cozinha (pista de história)",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-21",
+      "arquivo": "foto_festa_antiga.jpg",
+      "pasta": "fotos",
+      "prioridade": "Baixa",
+      "proporcao": "3:2",
+      "onde": "Foto desbotada num porta-retrato da recepção",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-22",
+      "arquivo": "foto_inauguracao.jpg",
+      "pasta": "fotos",
+      "prioridade": "Baixa",
+      "proporcao": "3:2",
+      "onde": "Foto desbotada na parede do corredor dos fundos",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-23",
+      "arquivo": "capa_manual_vigia.jpg",
+      "pasta": "documentos",
+      "prioridade": "Baixa",
+      "proporcao": "3:4",
+      "onde": "Capa do manual do vigia, em cima da mesa da sala de segurança",
+      "texto": "MANUAL DO VIGIA NOTURNO",
+      "posicao_texto": "centro"
+    },
+    {
+      "id": "ARTE-24",
+      "arquivo": "capa_relatorio_manutencao.jpg",
+      "pasta": "documentos",
+      "prioridade": "Baixa",
+      "proporcao": "3:4",
+      "onde": "Capa de uma pasta de relatório no depósito",
+      "texto": "RELATÓRIO DE MANUTENÇÃO",
+      "posicao_texto": "topo"
+    },
+    {
+      "id": "ARTE-25",
+      "arquivo": "menu_fundo_sombrio.jpg",
+      "pasta": "menu",
+      "prioridade": "Alta",
+      "proporcao": "16:9",
+      "onde": "Fundo do menu principal, versão sombria (troca com a ARTE-10 com glitch de VHS)",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-26",
+      "arquivo": "standee_tito.jpg",
+      "pasta": "decoracao",
+      "prioridade": "Alta",
+      "proporcao": "9:16",
+      "onde": "figura de papelão do Tito na recepção (fundo verde é apagado pelo jogo)",
+      "texto": "",
+      "posicao_texto": "",
+      "fundo_verde": true
+    },
+    {
+      "id": "ARTE-27",
+      "arquivo": "cartaz_festa_estrelas.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor das festas, cartaz ao lado da porta da sala Estrelas",
+      "texto": "FESTA NAS ESTRELAS",
+      "posicao_texto": "topo",
+      "linhas": [
+        "Foguetes, planetas e muito bolo!",
+        "Sala Estrelas"
+      ],
+      "caixa_linhas": [
+        0.08,
+        0.78,
+        0.92,
+        0.96
+      ]
+    },
+    {
+      "id": "ARTE-28",
+      "arquivo": "cartaz_festa_piratas.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor das festas, cartaz ao lado da porta da sala Piratas",
+      "texto": "FESTA PIRATA",
+      "posicao_texto": "topo",
+      "linhas": [
+        "Caça ao tesouro com o Tito!",
+        "Sala Piratas"
+      ],
+      "caixa_linhas": [
+        0.08,
+        0.78,
+        0.92,
+        0.96
+      ]
+    },
+    {
+      "id": "ARTE-29",
+      "arquivo": "cartaz_festa_princesas.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor das festas, cartaz ao lado da porta da sala Princesas",
+      "texto": "BAILE DAS PRINCESAS",
+      "posicao_texto": "topo",
+      "linhas": [
+        "Coroas, castelo e muito brilho!",
+        "Sala Princesas"
+      ],
+      "caixa_linhas": [
+        0.08,
+        0.78,
+        0.92,
+        0.96
+      ]
+    },
+    {
+      "id": "ARTE-30",
+      "arquivo": "cartaz_parabens.jpg",
+      "pasta": "posters",
+      "prioridade": "Média",
+      "proporcao": "2:3",
+      "onde": "Corredor das festas, cartaz grande na parede oeste",
+      "texto": "PARABÉNS!",
+      "posicao_texto": "topo",
+      "linhas": [
+        "Comemore seu aniversário com o Tito e a Pipoca!"
+      ],
+      "caixa_linhas": [
+        0.08,
+        0.78,
+        0.92,
+        0.96
+      ]
+    },
+    {
+      "id": "ARTE-31",
+      "arquivo": "pista_aniversario.jpg",
+      "pasta": "posters",
+      "prioridade": "Alta",
+      "proporcao": "2:3",
+      "onde": "Sala de festa Estrelas: convite da festa do Lucas (PISTA: a idade do Lucas é o 3º dígito da senha, escrita pelo jogo)",
+      "texto": "FESTA DO LUCAS",
+      "posicao_texto": "topo",
+      "linhas": [
+        "Venha comemorar os {D3} aninhos do Lucas com o Tito e a Pipoca!",
+        "Sábado, 15h"
+      ],
+      "caixa_linhas": [
+        0.08,
+        0.7,
+        0.92,
+        0.96
+      ]
+    },
+    {
+      "id": "ARTE-32",
+      "arquivo": "mapa_tesouro.jpg",
+      "pasta": "decoracao",
+      "prioridade": "Baixa",
+      "proporcao": "3:2",
+      "onde": "Sala de festa Piratas: mapa do tesouro emoldurado na parede sul",
+      "texto": "",
+      "posicao_texto": ""
+    },
+    {
+      "id": "ARTE-33",
+      "arquivo": "icone_jogo.jpg",
+      "pasta": "icone",
+      "prioridade": "Alta",
+      "proporcao": "1:1",
+      "onde": "ícone do jogo (exe, janela e barra de tarefas); rodar ferramentas/gerar_icone.py depois",
+      "texto": "",
+      "posicao_texto": "",
+      "fundo_verde": true
+    }
+  ]
+}

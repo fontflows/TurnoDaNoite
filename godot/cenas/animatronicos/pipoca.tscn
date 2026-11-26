@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/pipoca.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/personagens/pipoca.glb" id="2_modelo"]
+[ext_resource type="AudioStream" path="res://assets/sons/pipoca_chiado.wav" id="3_chiado"]
+[ext_resource type="AudioStream" path="res://assets/sons/pipoca_pane.wav" id="4_pane"]
+
+[sub_resource type="CapsuleShape3D" id="Capsula"]
+radius = 0.4
+height = 1.9
+
+[node name="Pipoca" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_script")
+nome_exibicao = "Pipoca"
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("Capsula")
+
+[node name="Agente" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.35
+target_desired_distance = 0.8
+path_height_offset = 0.3
+radius = 0.4
+height = 1.9
+
+[node name="Modelo" parent="." instance=ExtResource("2_modelo")]
+
+[node name="SomChiado" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_chiado")
+volume_db = -2.0
+unit_size = 4.0
+max_distance = 20.0
+
+[node name="SomPane" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_pane")
+unit_size = 6.0
+max_distance = 25.0

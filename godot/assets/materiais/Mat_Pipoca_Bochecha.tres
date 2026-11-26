@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=1 format=3]
+
+[resource]
+resource_name = "Mat_Pipoca_Bochecha"
+albedo_color = Color(0.9137, 0.5608, 0.6980, 1)
+roughness = 0.8

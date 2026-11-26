@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/pilha.gd" id="1_script"]
+
+[sub_resource type="SphereShape3D" id="Esfera"]
+radius = 0.45
+
+[sub_resource type="StandardMaterial3D" id="Mat_Pilha_Corpo"]
+albedo_color = Color(0.15, 0.55, 0.2, 1)
+emission_enabled = true
+emission = Color(0.3, 1, 0.35, 1)
+emission_energy_multiplier = 1.2
+
+[sub_resource type="CylinderMesh" id="Malha_Pilha"]
+top_radius = 0.045
+bottom_radius = 0.045
+height = 0.17
+radial_segments = 12
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="Mat_Pilha_Ponta"]
+albedo_color = Color(0.75, 0.75, 0.72, 1)
+metallic = 0.6
+
+[sub_resource type="CylinderMesh" id="Malha_Ponta"]
+top_radius = 0.018
+bottom_radius = 0.018
+height = 0.02
+radial_segments = 8
+rings = 1
+
+[node name="Pilha" type="Area3D"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_script")
+
+[node name="Colisao" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("Esfera")
+
+[node name="Modelo" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0)
+
+[node name="Corpo" type="MeshInstance3D" parent="Modelo"]
+mesh = SubResource("Malha_Pilha")
+surface_material_override/0 = SubResource("Mat_Pilha_Corpo")
+
+[node name="Ponta" type="MeshInstance3D" parent="Modelo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095, 0)
+mesh = SubResource("Malha_Ponta")
+surface_material_override/0 = SubResource("Mat_Pilha_Ponta")
+
+[node name="Brilho" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+light_color = Color(0.4, 1, 0.45, 1)
+light_energy = 0.7
+omni_range = 1.6

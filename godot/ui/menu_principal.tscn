@@ -1,0 +1,164 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/cenario/predio.glb" id="2_predio"]
+[ext_resource type="PackedScene" path="res://assets/cenario/moveis.glb" id="3_moveis"]
+[ext_resource type="PackedScene" path="res://assets/personagens/tito.glb" id="4_tito"]
+[ext_resource type="PackedScene" path="res://assets/personagens/pipoca.glb" id="5_pipoca"]
+[ext_resource type="Script" path="res://scripts/luz_piscante.gd" id="6_luz_piscante"]
+[ext_resource type="Shader" path="res://assets/shaders/estatica.gdshader" id="7_estatica"]
+[ext_resource type="PackedScene" path="res://ui/controles.tscn" id="8_controles"]
+[ext_resource type="PackedScene" path="res://ui/opcoes.tscn" id="9_opcoes"]
+[ext_resource type="AudioStream" path="res://assets/sons/musica_pizzaria.wav" id="10_musica"]
+[ext_resource type="AudioStream" path="res://assets/sons/ambiente_grave.wav" id="11_ambiente"]
+
+[sub_resource type="Environment" id="Ambiente_Menu"]
+background_mode = 1
+background_color = Color(0, 0, 0, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.3, 0.3, 0.42, 1)
+ambient_light_energy = 0.1
+fog_enabled = true
+fog_light_color = Color(0.02, 0.02, 0.03, 1)
+fog_density = 0.05
+
+[sub_resource type="ShaderMaterial" id="Material_Estatica"]
+shader = ExtResource("7_estatica")
+shader_parameter/intensidade = 0.1
+shader_parameter/cor_fundo = Color(0, 0, 0, 0.22)
+shader_parameter/velocidade = 24.0
+shader_parameter/tamanho_grao = 2.0
+
+[sub_resource type="Gradient" id="Gradiente_Sombra"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0, 0, 0, 0.85, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="Textura_Sombra"]
+gradient = SubResource("Gradiente_Sombra")
+width = 256
+height = 16
+
+[node name="MenuPrincipal" type="Node"]
+script = ExtResource("1_script")
+
+[node name="Cenario" type="Node3D" parent="."]
+
+[node name="Ambiente" type="WorldEnvironment" parent="Cenario"]
+environment = SubResource("Ambiente_Menu")
+
+[node name="Predio" parent="Cenario" instance=ExtResource("2_predio")]
+
+[node name="Moveis" parent="Cenario" instance=ExtResource("3_moveis")]
+
+[node name="Tito" parent="Cenario" instance=ExtResource("4_tito")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -13)
+
+[node name="Pipoca" parent="Cenario" instance=ExtResource("5_pipoca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.5, -13)
+
+[node name="Camera" type="Camera3D" parent="Cenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -4)
+current = true
+fov = 62.0
+
+[node name="Holofote" type="SpotLight3D" parent="Cenario"]
+transform = Transform3D(1, 0, 0, 0, 0.970, 0.242, 0, -0.242, 0.970, 0, 3.1, -6.5)
+light_color = Color(0.75, 0.6, 1, 1)
+light_energy = 2.2
+spot_range = 14.0
+spot_angle = 28.0
+script = ExtResource("6_luz_piscante")
+chance_falha_por_segundo = 0.35
+
+[node name="Luz_Vermelha_Palco" type="OmniLight3D" parent="Cenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55, -14.4)
+light_color = Color(1, 0.15, 0.1, 1)
+light_energy = 1.0
+omni_range = 7.0
+omni_attenuation = 1.4
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="Estatica" type="ColorRect" parent="Interface"]
+material = SubResource("Material_Estatica")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SombraEsquerda" type="TextureRect" parent="Interface"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 620.0
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("Textura_Sombra")
+expand_mode = 1
+
+[node name="Titulo" type="Label" parent="Interface"]
+theme_type_variation = &"RotuloTitulo"
+offset_left = 64.0
+offset_top = 70.0
+offset_right = 764.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0.95, 0.9, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0.85, 0.15, 0.1, 0.7)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 68
+text = "TURNO DA NOITE"
+
+[node name="Subtitulo" type="Label" parent="Interface"]
+theme_type_variation = &"RotuloLetreiro"
+offset_left = 70.0
+offset_top = 152.0
+offset_right = 570.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.92, 0.66, 0.24, 1)
+theme_override_font_sizes/font_size = 28
+text = "Pizzaria do Tito"
+
+[node name="Botoes" type="VBoxContainer" parent="Interface"]
+unique_name_in_owner = true
+offset_left = 70.0
+offset_top = 280.0
+offset_right = 330.0
+offset_bottom = 560.0
+theme_override_constants/separation = 14
+
+[node name="BotaoJogar" type="Button" parent="Interface/Botoes"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jogar"
+
+[node name="BotaoControles" type="Button" parent="Interface/Botoes"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Controles"
+
+[node name="BotaoOpcoes" type="Button" parent="Interface/Botoes"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Opções"
+
+[node name="BotaoSair" type="Button" parent="Interface/Botoes"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sair"
+
+[node name="Controles" parent="Interface" instance=ExtResource("8_controles")]
+visible = false
+
+[node name="Opcoes" parent="Interface" instance=ExtResource("9_opcoes")]
+visible = false
+
+[node name="Musica" type="AudioStreamPlayer" parent="." groups=["som_musica"]]
+stream = ExtResource("10_musica")
+volume_db = -14.0
+
+[node name="SomAmbiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_ambiente")
+volume_db = -16.0

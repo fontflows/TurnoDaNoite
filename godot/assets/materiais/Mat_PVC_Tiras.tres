@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=1 format=3]
+
+[resource]
+resource_name = "Mat_PVC_Tiras"
+albedo_color = Color(0.7490, 0.8784, 0.9255, 1)
+roughness = 0.8

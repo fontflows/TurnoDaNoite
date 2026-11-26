@@ -1,0 +1,121 @@
+[gd_resource type="Theme" load_steps=14 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fontes/Fredoka/Fredoka-Variable.ttf" id="1_fredoka"]
+[ext_resource type="FontFile" path="res://assets/fontes/Bungee/Bungee-Regular.ttf" id="2_bungee"]
+[ext_resource type="FontFile" path="res://assets/fontes/VT323/VT323-Regular.ttf" id="3_vt323"]
+[ext_resource type="FontFile" path="res://assets/fontes/Creepster/Creepster-Regular.ttf" id="4_creepster"]
+[ext_resource type="FontFile" path="res://assets/fontes/CourierPrime/CourierPrime-Regular.ttf" id="5_courier"]
+[ext_resource type="FontFile" path="res://assets/fontes/Caveat/Caveat-Variable.ttf" id="6_caveat"]
+[ext_resource type="FontFile" path="res://assets/fontes/GochiHand/GochiHand-Regular.ttf" id="7_gochi"]
+[ext_resource type="FontFile" path="res://assets/fontes/PressStart2P/PressStart2P-Regular.ttf" id="8_pressstart"]
+
+[sub_resource type="StyleBoxFlat" id="Botao_Normal"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.07, 0.06, 0.08, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45, 0.41, 0.35, 1)
+
+[sub_resource type="StyleBoxFlat" id="Botao_Foco"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.16, 0.1, 0.08, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.92, 0.66, 0.24, 1)
+
+[sub_resource type="StyleBoxFlat" id="Botao_Pressionado"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.35, 0.1, 0.08, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.35, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="Painel"]
+content_margin_left = 24.0
+content_margin_top = 20.0
+content_margin_right = 24.0
+content_margin_bottom = 20.0
+bg_color = Color(0.04, 0.035, 0.05, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.32, 0.28, 1)
+
+[sub_resource type="StyleBoxFlat" id="Aba_Selecionada"]
+content_margin_left = 16.0
+content_margin_top = 6.0
+content_margin_right = 16.0
+content_margin_bottom = 6.0
+bg_color = Color(0.16, 0.1, 0.08, 1)
+border_width_top = 2
+border_color = Color(0.92, 0.66, 0.24, 1)
+
+[resource]
+default_font = ExtResource("1_fredoka")
+default_font_size = 20
+Button/colors/font_color = Color(0.9, 0.86, 0.78, 1)
+Button/colors/font_focus_color = Color(1, 0.8, 0.4, 1)
+Button/colors/font_hover_color = Color(1, 0.8, 0.4, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 0.9, 0.8, 1)
+Button/constants/outline_size = 4
+Button/font_sizes/font_size = 22
+Button/fonts/font = ExtResource("2_bungee")
+Button/styles/focus = SubResource("Botao_Foco")
+Button/styles/hover = SubResource("Botao_Foco")
+Button/styles/normal = SubResource("Botao_Normal")
+Button/styles/pressed = SubResource("Botao_Pressionado")
+CheckButton/colors/font_color = Color(0.9, 0.86, 0.78, 1)
+CheckButton/font_sizes/font_size = 20
+CheckButton/fonts/font = ExtResource("1_fredoka")
+CheckButton/styles/normal = SubResource("Botao_Normal")
+CheckButton/styles/focus = SubResource("Botao_Foco")
+CheckButton/styles/hover = SubResource("Botao_Foco")
+CheckButton/styles/pressed = SubResource("Botao_Normal")
+Label/colors/font_color = Color(0.92, 0.88, 0.8, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 6
+OptionButton/fonts/font = ExtResource("1_fredoka")
+OptionButton/font_sizes/font_size = 20
+PanelContainer/styles/panel = SubResource("Painel")
+PopupMenu/fonts/font = ExtResource("1_fredoka")
+TabBar/fonts/font = ExtResource("2_bungee")
+TabBar/font_sizes/font_size = 18
+TabBar/colors/font_selected_color = Color(1, 0.8, 0.4, 1)
+TabBar/colors/font_unselected_color = Color(0.65, 0.6, 0.55, 1)
+TabContainer/fonts/font = ExtResource("2_bungee")
+TabContainer/font_sizes/font_size = 18
+TabContainer/colors/font_selected_color = Color(1, 0.8, 0.4, 1)
+TabContainer/colors/font_unselected_color = Color(0.65, 0.6, 0.55, 1)
+TabContainer/styles/tab_selected = SubResource("Aba_Selecionada")
+TabContainer/styles/panel = SubResource("Painel")
+RotuloHUD/base_type = &"Label"
+RotuloHUD/fonts/font = ExtResource("3_vt323")
+RotuloTitulo/base_type = &"Label"
+RotuloTitulo/fonts/font = ExtResource("4_creepster")
+RotuloLetreiro/base_type = &"Label"
+RotuloLetreiro/fonts/font = ExtResource("2_bungee")
+RotuloDocumento/base_type = &"Label"
+RotuloDocumento/fonts/font = ExtResource("5_courier")
+RotuloManuscrito/base_type = &"Label"
+RotuloManuscrito/fonts/font = ExtResource("6_caveat")
+RotuloCrianca/base_type = &"Label"
+RotuloCrianca/fonts/font = ExtResource("7_gochi")
+RotuloArcade/base_type = &"Label"
+RotuloArcade/fonts/font = ExtResource("8_pressstart")

@@ -1,0 +1,843 @@
+{
+ "comodos": [
+  {
+   "nome": "Salao",
+   "titulo": "Salão + palco",
+   "x0": 14,
+   "x1": 40,
+   "z0": 0,
+   "z1": 16,
+   "altura": 3.6
+  },
+  {
+   "nome": "Oficina",
+   "titulo": "Oficina / bastidores",
+   "x0": 0,
+   "x1": 14,
+   "z0": 0,
+   "z1": 16,
+   "altura": 3.2
+  },
+  {
+   "nome": "Cozinha",
+   "titulo": "Cozinha",
+   "x0": 40,
+   "x1": 52,
+   "z0": 0,
+   "z1": 16,
+   "altura": 3.2
+  },
+  {
+   "nome": "Camara_Fria",
+   "titulo": "Câmara frigorífica",
+   "x0": 52,
+   "x1": 60,
+   "z0": 0,
+   "z1": 8,
+   "altura": 2.8
+  },
+  {
+   "nome": "Banheiros",
+   "titulo": "Banheiros",
+   "x0": 52,
+   "x1": 60,
+   "z0": 8,
+   "z1": 16,
+   "altura": 3.0
+  },
+  {
+   "nome": "Corredor_Principal",
+   "titulo": "Corredor principal",
+   "x0": 0,
+   "x1": 60,
+   "z0": 16,
+   "z1": 19,
+   "altura": 3.2
+  },
+  {
+   "nome": "Deposito",
+   "titulo": "Depósito",
+   "x0": 0,
+   "x1": 14,
+   "z0": 19,
+   "z1": 33,
+   "altura": 3.6
+  },
+  {
+   "nome": "Sala_Eletrica",
+   "titulo": "Sala elétrica / gerador",
+   "x0": 0,
+   "x1": 14,
+   "z0": 33,
+   "z1": 45,
+   "altura": 3.2
+  },
+  {
+   "nome": "Fliperama",
+   "titulo": "Fliperama + prêmios",
+   "x0": 14,
+   "x1": 32,
+   "z0": 19,
+   "z1": 33,
+   "altura": 3.2
+  },
+  {
+   "nome": "Recepcao",
+   "titulo": "Recepção / entrada",
+   "x0": 14,
+   "x1": 32,
+   "z0": 33,
+   "z1": 45,
+   "altura": 3.4
+  },
+  {
+   "nome": "Corredor_Festas",
+   "titulo": "Corredor das festas",
+   "x0": 32,
+   "x1": 35,
+   "z0": 19,
+   "z1": 45,
+   "altura": 3.0
+  },
+  {
+   "nome": "Festa_Estrelas",
+   "titulo": "Sala de festa Estrelas",
+   "x0": 35,
+   "x1": 44,
+   "z0": 19,
+   "z1": 27.5,
+   "altura": 3.0
+  },
+  {
+   "nome": "Festa_Piratas",
+   "titulo": "Sala de festa Piratas",
+   "x0": 35,
+   "x1": 44,
+   "z0": 27.5,
+   "z1": 36,
+   "altura": 3.0
+  },
+  {
+   "nome": "Festa_Princesas",
+   "titulo": "Sala de festa Princesas",
+   "x0": 35,
+   "x1": 44,
+   "z0": 36,
+   "z1": 45,
+   "altura": 3.0
+  },
+  {
+   "nome": "Corredor_Funcionarios",
+   "titulo": "Corredor dos funcionários",
+   "x0": 44,
+   "x1": 47,
+   "z0": 19,
+   "z1": 45,
+   "altura": 3.0
+  },
+  {
+   "nome": "Vestiario",
+   "titulo": "Vestiário",
+   "x0": 47,
+   "x1": 54,
+   "z0": 19,
+   "z1": 27,
+   "altura": 3.0
+  },
+  {
+   "nome": "Sala_Gerente",
+   "titulo": "Sala do gerente",
+   "x0": 54,
+   "x1": 60,
+   "z0": 19,
+   "z1": 27,
+   "altura": 3.0
+  },
+  {
+   "nome": "Sala_Seguranca",
+   "titulo": "Sala de segurança",
+   "x0": 47,
+   "x1": 50,
+   "z0": 27,
+   "z1": 29.5,
+   "altura": 2.4
+  },
+  {
+   "nome": "Armario_Limpeza",
+   "titulo": "Armário de limpeza",
+   "x0": 47,
+   "x1": 50,
+   "z0": 29.5,
+   "z1": 31,
+   "altura": 2.4
+  },
+  {
+   "nome": "Arquivo",
+   "titulo": "Arquivo morto",
+   "x0": 50,
+   "x1": 60,
+   "z0": 27,
+   "z1": 31,
+   "altura": 2.8
+  },
+  {
+   "nome": "Copa",
+   "titulo": "Copa dos funcionários",
+   "x0": 47,
+   "x1": 60,
+   "z0": 31,
+   "z1": 45,
+   "altura": 3.0
+  }
+ ],
+ "portas": [
+  {
+   "eixo": "z",
+   "fixo": 16,
+   "centro": 20,
+   "largura": 1.6,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 16,
+   "centro": 34,
+   "largura": 1.6,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 16,
+   "centro": 7,
+   "largura": 1.4,
+   "tipo": "emperrada",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 14,
+   "centro": 3,
+   "largura": 1.4,
+   "tipo": "unica",
+   "lado": "Oficina"
+  },
+  {
+   "eixo": "x",
+   "fixo": 40,
+   "centro": 8,
+   "largura": 1.6,
+   "tipo": "vaivem",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 16,
+   "centro": 46,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 52,
+   "centro": 4,
+   "largura": 1.4,
+   "tipo": "pesada",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 16,
+   "centro": 56,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 19,
+   "centro": 7,
+   "largura": 1.4,
+   "tipo": "corrente",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 14,
+   "centro": 30,
+   "largura": 1.4,
+   "tipo": "unica",
+   "lado": "Deposito"
+  },
+  {
+   "eixo": "z",
+   "fixo": 19,
+   "centro": 18,
+   "largura": 1.6,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 19,
+   "centro": 28,
+   "largura": 1.6,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 33,
+   "centro": 23,
+   "largura": 2.8,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 32,
+   "centro": 26,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 14,
+   "centro": 39,
+   "largura": 1.4,
+   "tipo": "teclado",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 32,
+   "centro": 40,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 45,
+   "centro": 23,
+   "largura": 3.0,
+   "tipo": "catraca",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 35,
+   "centro": 23,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 35,
+   "centro": 32,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 35,
+   "centro": 40,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 44,
+   "centro": 23,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 44,
+   "centro": 40,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 19,
+   "centro": 45.5,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 19,
+   "centro": 57,
+   "largura": 1.4,
+   "tipo": "chave",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 47,
+   "centro": 23,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 47,
+   "centro": 28.25,
+   "largura": 1.2,
+   "tipo": "aco",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 47,
+   "centro": 30.25,
+   "largura": 0.9,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "x",
+   "fixo": 47,
+   "centro": 38,
+   "largura": 1.4,
+   "tipo": "livre",
+   "lado": null
+  },
+  {
+   "eixo": "z",
+   "fixo": 31,
+   "centro": 55,
+   "largura": 1.2,
+   "tipo": "livre",
+   "lado": null
+  }
+ ],
+ "pontos": {
+  "spawn_jogador": [
+   48.2,
+   28.25,
+   "leste"
+  ],
+  "palco_tito": [
+   23.5,
+   2.5,
+   "sul"
+  ],
+  "palco_pipoca": [
+   30.5,
+   2.5,
+   "sul"
+  ],
+  "palco": [
+   20,
+   34,
+   0,
+   5
+  ],
+  "palco_escada": [
+   25.5,
+   28.5,
+   5,
+   6.5
+  ],
+  "disjuntor_cozinha": [
+   46.0,
+   0.1,
+   "sul"
+  ],
+  "disjuntor_deposito": [
+   0.1,
+   30.0,
+   "leste"
+  ],
+  "disjuntor_gerente": [
+   59.9,
+   23.0,
+   "oeste"
+  ],
+  "disjuntor_eletrica": [
+   5.0,
+   44.9,
+   "norte"
+  ],
+  "gerador": [
+   8.0,
+   39.0,
+   "oeste"
+  ],
+  "maquina_tito_kart": [
+   17.0,
+   19.6,
+   "sul"
+  ],
+  "maquina_space_pizza": [
+   20.0,
+   19.6,
+   "sul"
+  ],
+  "maquina_pipoca_pula_pula": [
+   23.0,
+   19.6,
+   "sul"
+  ],
+  "maquina_serpente_neon": [
+   26.0,
+   19.6,
+   "sul"
+  ],
+  "maquina_fantasminha": [
+   29.0,
+   19.6,
+   "sul"
+  ],
+  "maquina_garra": [
+   16.2,
+   31.4,
+   "leste"
+  ],
+  "skee_ball": [
+   30.0,
+   30.0,
+   "oeste"
+  ],
+  "balcao_premios": [
+   23.0,
+   32.2,
+   "norte"
+  ],
+  "alicate": [
+   4.0,
+   3.0,
+   "sul"
+  ],
+  "teclado_eletrica": [
+   14.125,
+   37.9,
+   "leste"
+  ],
+  "pista_aniversario": [
+   39.5,
+   19.2,
+   "sul"
+  ],
+  "pista_quadro_avisos": [
+   59.8,
+   37.0,
+   "oeste"
+  ],
+  "pista_recado_gerente": [
+   57.0,
+   21.5,
+   "sul"
+  ],
+  "pilhas": [
+   [
+    27.0,
+    1.2
+   ],
+   [
+    57.0,
+    1.5
+   ],
+   [
+    2.0,
+    44.0
+   ],
+   [
+    2.0,
+    20.0
+   ],
+   [
+    43.0,
+    35.0
+   ],
+   [
+    59.0,
+    15.0
+   ]
+  ],
+  "fichas": [
+   [
+    23.0,
+    31.0
+   ],
+   [
+    54.0,
+    41.0
+   ],
+   [
+    50.0,
+    20.5
+   ],
+   [
+    39.5,
+    21.5
+   ],
+   [
+    39.5,
+    30.0
+   ],
+   [
+    39.5,
+    43.0
+   ],
+   [
+    18.0,
+    36.0
+   ],
+   [
+    42.0,
+    13.5
+   ]
+  ],
+  "esconderijos": [
+   [
+    "armario",
+    53.5,
+    20.5
+   ],
+   [
+    "armario",
+    53.5,
+    22.0
+   ],
+   [
+    "armario",
+    53.5,
+    23.5
+   ],
+   [
+    "armario",
+    53.5,
+    25.0
+   ],
+   [
+    "cabine",
+    58.5,
+    9.5
+   ],
+   [
+    "cabine",
+    58.5,
+    11.5
+   ],
+   [
+    "cabine",
+    58.5,
+    13.5
+   ],
+   [
+    "mesa_toalha",
+    39.5,
+    23.25
+   ],
+   [
+    "mesa_toalha",
+    39.5,
+    31.75
+   ],
+   [
+    "mesa_toalha",
+    39.5,
+    40.5
+   ],
+   [
+    "cortina_palco",
+    20.6,
+    1.0
+   ],
+   [
+    "cortina_palco",
+    33.4,
+    1.0
+   ],
+   [
+    "figurinos",
+    2.0,
+    13.0
+   ],
+   [
+    "armario_limpeza",
+    48.5,
+    30.25
+   ]
+  ],
+  "patrulha": [
+   [
+    18,
+    10
+   ],
+   [
+    36,
+    10
+   ],
+   [
+    46,
+    8
+   ],
+   [
+    5,
+    17.5
+   ],
+   [
+    30,
+    17.5
+   ],
+   [
+    55,
+    17.5
+   ],
+   [
+    23,
+    26
+   ],
+   [
+    23,
+    40
+   ],
+   [
+    33.5,
+    30
+   ],
+   [
+    45.5,
+    34
+   ],
+   [
+    53,
+    38
+   ],
+   [
+    7,
+    26
+   ]
+  ],
+  "cameras": [
+   [
+    "CAM 1 - Palco",
+    27.0,
+    14.5,
+    3.0,
+    27.0,
+    2.0,
+    null
+   ],
+   [
+    "CAM 2 - Fliperama",
+    15.0,
+    20.0,
+    2.8,
+    30.0,
+    32.0,
+    "cozinha"
+   ],
+   [
+    "CAM 3 - Corredor",
+    1.0,
+    17.5,
+    2.8,
+    60.0,
+    17.5,
+    null
+   ],
+   [
+    "CAM 4 - Recepção",
+    31.0,
+    44.0,
+    3.0,
+    16.0,
+    34.0,
+    null
+   ],
+   [
+    "CAM 5 - Festas",
+    33.5,
+    44.5,
+    2.7,
+    33.5,
+    19.0,
+    "deposito"
+   ],
+   [
+    "CAM 6 - Cozinha",
+    51.0,
+    15.0,
+    2.8,
+    41.0,
+    1.0,
+    "cozinha"
+   ]
+  ]
+ },
+ "duto_grades": [
+  {
+   "comodo": "Oficina",
+   "x": 11,
+   "z": 15.85
+  },
+  {
+   "comodo": "Cozinha",
+   "x": 45,
+   "z": 12
+  },
+  {
+   "comodo": "Fliperama",
+   "x": 23,
+   "z": 24
+  },
+  {
+   "comodo": "Festa_Piratas",
+   "x": 42,
+   "z": 29
+  },
+  {
+   "comodo": "Copa",
+   "x": 53,
+   "z": 44.85
+  }
+ ],
+ "energia": {
+  "cozinha": [
+   "Cozinha",
+   "Fliperama",
+   "Camara_Fria"
+  ],
+  "deposito": [
+   "Deposito",
+   "Corredor_Festas",
+   "Festa_Estrelas",
+   "Festa_Piratas",
+   "Festa_Princesas"
+  ],
+  "gerente": [
+   "Sala_Gerente",
+   "Vestiario",
+   "Copa",
+   "Arquivo",
+   "Corredor_Funcionarios",
+   "Armario_Limpeza"
+  ],
+  "eletrica": [
+   "Sala_Eletrica",
+   "Recepcao",
+   "Oficina",
+   "Banheiros",
+   "Corredor_Principal"
+  ],
+  "gerador": [
+   "Salao"
+  ]
+ }
+}

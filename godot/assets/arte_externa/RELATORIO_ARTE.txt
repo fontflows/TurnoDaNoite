@@ -1,0 +1,39 @@
+Verificação das artes externas — 25/11/2026 14:21
+Pasta: C:\Users\User\Documents\TurnoDaNoite\godot\assets\arte_externa
+
+[PRESENTE] ARTE-01 [Alta] palco/painel_palco.jpg — OK  (1584x672)
+[PRESENTE] ARTE-02 [Alta] fliperama/marquee_tito_kart.jpg — OK  (1584x672)
+[PRESENTE] ARTE-03 [Alta] fliperama/marquee_space_pizza.jpg — OK  (1584x672)
+[PRESENTE] ARTE-04 [Alta] fliperama/marquee_pipoca_pula_pula.jpg — OK  (1584x672)
+[PRESENTE] ARTE-05 [Alta] fliperama/marquee_serpente_neon.jpg — OK  (1584x672)
+[PRESENTE] ARTE-06 [Alta] fliperama/marquee_fantasminha.jpg — OK  (1584x672)
+[PRESENTE] ARTE-07 [Alta] posters/poster_celebre.jpg — OK  (848x1264)
+[PRESENTE] ARTE-08 [Alta] posters/poster_sorria_camera.jpg — OK  (848x1264)
+[PRESENTE] ARTE-09 [Alta] posters/poster_pizza_quentinha.jpg — OK  (848x1264)
+[PRESENTE] ARTE-10 [Alta] menu/menu_fundo.jpg — OK  (1376x768)
+[PRESENTE] ARTE-11 [Média] menu/tela_carregamento.jpg — OK  (1376x768)
+[PRESENTE] ARTE-12 [Média] posters/poster_seja_feliz.jpg — OK  (848x1264)
+[PRESENTE] ARTE-13 [Média] posters/poster_pipoca_pular.jpg — OK  (848x1264)
+[PRESENTE] ARTE-14 [Média] posters/poster_pizza_dobro.jpg — OK  (848x1264)
+[PRESENTE] ARTE-15 [Média] posters/poster_aniversario.jpg — OK  (848x1264)
+[PRESENTE] ARTE-16 [Média] fliperama/lateral_arcade.jpg — OK  (768x1376)
+[PRESENTE] ARTE-17 [Média] fliperama/painel_maquina_garra.jpg — OK  (1024x1024)
+[PRESENTE] ARTE-18 [Média] decoracao/cardapio.jpg — OK  (896x1200)
+[PRESENTE] ARTE-19 [Baixa] decoracao/desenho_crianca_amigos.jpg — OK  (1200x896)
+[PRESENTE] ARTE-20 [Baixa] decoracao/desenho_crianca_vigia.jpg — OK  (1200x896)
+[PRESENTE] ARTE-21 [Baixa] fotos/foto_festa_antiga.jpg — OK  (1264x848)
+[PRESENTE] ARTE-22 [Baixa] fotos/foto_inauguracao.jpg — OK  (1264x848)
+[PRESENTE] ARTE-23 [Baixa] documentos/capa_manual_vigia.jpg — OK  (896x1200)
+[PRESENTE] ARTE-24 [Baixa] documentos/capa_relatorio_manutencao.jpg — OK  (896x1200)
+[PRESENTE] ARTE-25 [Alta] menu/menu_fundo_sombrio.jpg — OK  (1376x768)
+[PRESENTE] ARTE-26 [Alta] decoracao/standee_tito.jpg — OK  (768x1376)
+[PRESENTE] ARTE-27 [Média] posters/cartaz_festa_estrelas.jpg — OK  (848x1264)
+[PRESENTE] ARTE-28 [Média] posters/cartaz_festa_piratas.jpg — OK  (848x1264)
+[PRESENTE] ARTE-29 [Média] posters/cartaz_festa_princesas.jpg — OK  (848x1264)
+[PRESENTE] ARTE-30 [Média] posters/cartaz_parabens.jpg — OK  (848x1264)
+[PRESENTE] ARTE-31 [Alta] posters/pista_aniversario.jpg — OK  (848x1264)
+[PRESENTE] ARTE-32 [Baixa] decoracao/mapa_tesouro.jpg — OK  (1264x848)
+[FALTANDO] ARTE-33 [Alta] icone/icone_jogo.jpg — ícone do jogo (exe, janela e barra de tarefas); rodar ferramentas/gerar_icone.py depois
+
+Resumo: 32 presentes, 0 com nome errado/parecido, 1 faltando (de 33).
+Artes que faltam não quebram o jogo: ele usa a versão feita por código no lugar.

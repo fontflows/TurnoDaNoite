@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/tela_fim.gd" id="1_script"]
+[ext_resource type="Shader" path="res://assets/shaders/estatica.gdshader" id="2_estatica"]
+[ext_resource type="AudioStream" path="res://assets/sons/vitoria.wav" id="3_som"]
+[ext_resource type="Theme" path="res://ui/tema.tres" id="4_tema"]
+
+[sub_resource type="ShaderMaterial" id="Material_Estatica"]
+shader = ExtResource("2_estatica")
+shader_parameter/intensidade = 0.08
+shader_parameter/cor_fundo = Color(0.05, 0.04, 0.0, 1)
+shader_parameter/velocidade = 18.0
+shader_parameter/tamanho_grao = 2.0
+
+[node name="Vitoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_tema")
+script = ExtResource("1_script")
+eh_vitoria = true
+
+[node name="Fundo" type="ColorRect" parent="."]
+material = SubResource("Material_Estatica")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Centro" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -170.0
+offset_right = 420.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Titulo" type="Label" parent="Centro"]
+theme_type_variation = &"RotuloHUD"
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.35, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 96
+text = "06:00 AM"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="Centro"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Você sobreviveu ao turno!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Detalhe" type="Label" parent="Centro"]
+theme_type_variation = &"RotuloHUD"
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.66, 0.6, 1)
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+
+[node name="Espaco" type="Control" parent="Centro"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Botoes" type="HBoxContainer" parent="Centro"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="BotaoDeNovo" type="Button" parent="Centro/Botoes"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Jogar de novo"
+
+[node name="BotaoMenu" type="Button" parent="Centro/Botoes"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Menu"
+
+[node name="Som" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_som")
+volume_db = -4.0
